@@ -1,0 +1,143 @@
+﻿/* body{background: url(../../images/1420grid_cesco_service.png) no-repeat center top; opacity: 0.6;} */
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; background: #dddddd;}
+
+section{width: 1420px; /* height: 4044px; */ margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1173px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+
+#contents_wrap{float: left; width: 1420px; /* height: 3898px; */ background: #ffffff;}
+.content_banner{float: left; width: 1420px; height: 375px; margin-bottom: 20px; background: #ffffff;}
+.content_tab_wrap{float: left; width: 1420px; height: 1200px; /* background: #bbbbbb; */}
+	.content_space{float: left; width: 1420px; height: 90px; background: #ffffff; margin-bottom: 5px;}
+		.summary_title img{float: left; margin-top: 40px;}
+		
+	.content_tab{float: left; width: 1420px; /* height: 1110px; background: #ffffff; */ }
+	/* .contents{float: left; width: 710px; height: 325px; background: #ffffff; box-sizing: border-box; padding-left: 35px; padding-top: 35px;} */
+	.tab li{width: 470px; height: 47px; float: left; text-align: center; line-height: 2.8; background: #eeeeee; color: #ffffff; border: 1px solid #ffffff; bottom: -2px; border-bottom: none; }
+	.tab li.active{background: #ffffff; border: 1px solid #009aea; border-bottom: none; bottom: -4px;}
+	.tab li a{color: #666666; font-weight: bold; font-size: 16px;}
+	/* .tab_content .tab_content_1{width: 1420px; height: 945px; background: #ffffff; border-top: 1px solid #009aea; bottom: -4px;} */
+
+.tab_contents_wrap{width: 1420px; height: 2000px; background: #ffffff;}
+.tab_content_1{width: 1420px; height: 150px; /* background: #ffefbf; */ border-top: 1px solid #009aea; bottom: -4px;}
+	.tab_content_1 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_1 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_1 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_2{width: 1420px; height: 115px; /* background: #ffefbf; */ bottom: -4px;}
+	.tab_content_2 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_2 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_2 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_3 ul li{display: block; float: left; margin-right: 15px;}
+.tab_content_4{float: left; width: 1420px; height: 680px; /* background: #79ff4c; */}
+	.tab_content_4 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_4 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_4 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_4_inner{float: left; width: 1330px; height: 500px; background: #f7f7f7; margin-left: 20px; margin-top: 20px; border-radius: 10px; border: 1px solid #bbbbbb; padding-left: 46px;}
+.tab_content_4_inner ul li{float: left; margin-right: 70px; }
+.tab_content_5{width: 1420px; height: 115px; /* background: #ffefbf; */ bottom: -4px;}
+	.tab_content_5 ul{margin-left: 20px; margin-top: 35px;}
+	
+	.tab_content_5 ul li{display: block; font-size: 15px; font-weight: bold; color: #666666; margin-left: 25px; margin-bottom: 10px;}
+	.tab_content_5 .strong_1{margin-left: 20px; font-size: 20px; font-weight: bold; color: #777777;}
+	.tab_content_5 .strong_2{margin-left: 25px; font-size: 17px; font-weight: bold;color: #777777;}
+	.inner_img_1 img{margin-bottom: 10px;}
+	.inner_img_2 img{margin-left: 26px; margin-bottom: 10px;}
+	.inner_img_3 img{margin-left: 26px; margin-bottom: 10px;}
+	
+	
+/* 게시판 */	
+#board_wrap{float: left; width: 1420px; height: 650px; /* background: #bfffcf; */}	
+	.cesco_review_1{font-size: 25px; font-weight: bold; color: #0087cc; margin-bottom: 10px;}
+	.cesco_review_2{font-size: 15px; font-weight: bold; color: #999999; margin-bottom: 30px;}
+#QnAboard{float: left; height: 456px; width: 1056px; background: #ffffff; border-bottom: 1px solid #cccccc;}
+
+.categorize1{width: 80px;  height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.categorize2{width: 100px; height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.categorize3{width: 505px; height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.categorize4{width: 140px; height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.categorize5{width: 185px; height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.categorize6{width: 140px; height: 45px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 42px; border: 1px solid #cccccc; border-left: none; border-right: none; border-bottom: none;}
+
+.content1{width: 80px;  height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 38px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.content2{width: 100px; height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 38px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.content3{width: 505px; height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: none;   line-height: 38px; border: 1px solid #cccccc;  border-left: none; border-bottom: none; text-indent: 10px;}
+.content4{width: 140px; height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 38px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.content5{width: 185px; height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 38px; border: 1px solid #cccccc; border-left: none; border-bottom: none;}
+.content6{width: 140px; height: 40px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 38px; border: 1px solid #cccccc;border-left: none;  border-right: none; border-bottom: none;}
+.number1{background-color: #3898d3;}
+.notice{margin-top: 15px;}
+
+/* 후기게시판 옆 컨텐츠 */
+.QnAboard_next{float: right; width: 317px; height: 540px; background: #ffffff;} 
+.QnAboard_next img{float: right;}
+.talk1_2{float: left; clear: both; margin-left: 17px; margin-top: 10px; margin-bottom: 10px; color: #333333; font-size: 15px; font-weight: bold; background: #999999; padding: 5px 56px;}
+.talk2_2{float: left; clear: both; margin-left: 17px; margin-top: 10px; margin-bottom: 10px; color: #333333; font-size: 15px; font-weight: bold; background: #999999; padding: 5px 72px;}
+
+/* .categorize1{width: 100px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 35px;  border: 1px 1px 0px 1px solid #cccccc; }
+.categorize2{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 35px;  border: 1px 1px 0px 1px solid #cccccc; }
+.categorize3{width: 762px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 35px;  border: 1px 1px 0px 1px solid #cccccc; }
+.categorize4{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 35px;  border: 1px 1px 0px 1px solid #cccccc; }
+
+.content1{width: 100px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 33px;  border: 1px 1px 0px 1px solid #cccccc;}
+.content2{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 33px;  border: 1px 1px 0px 1px solid #cccccc;}
+.content3{width: 762px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; box-sizing: border-box; text-align: none;  padding-left: 15px; line-height: 33px;  border: 1px 1px 0px 1px solid #cccccc; }
+.content4{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; box-sizing: border-box; text-align: center; line-height: 33px;  border: 1px 1px 0px 1px solid #cccccc;} */	
+
+/* 보행해충 방제 솔루션! WHY 세스코! */
+.customer_service_content{float: left; width: 1420px; height: 500px; /* background: #ffffbf; */ margin-bottom: -9px;}
+.customer_service_content_title{margin-top: 20px; margin-bottom: 20px; font-size: 17px; font-weight: bold; color: #666666;}
+	.why_cesco_wrap_1{float: left; width: 284px; height:300px; /* background: #cfbfff; */ text-align: center;}
+		.why_cesco_1 img{margin-bottom: 15px;}
+		.why_cesco_1_text_1{font-size: 15px; font-weight: bold; color: #666666; margin-bottom: 8px;}
+		.why_cesco_1_text_2{font-size: 14px; color: #777777;}
+
+
+.customer_service_number{width: 1400px; margin-left: 10px; margin-bottom: 50px; }	
+.cesco_service_btn{text-align: center;}
+
+
+
+
+
+/* 	.tapMenu1{height: 42px; width: 200px; margin: 0 auto; text-align: center; border: 3px solid #0093e8; line-height: 39px; color: #0093e8; font-weight: bold; }
+	.tapMenu2{height: 45px; width: 200px; background-color: #f5f5f5; margin: 0 auto; text-align: center; line-height: 39px; color: #0093e8; font-weight: bold; }
+	.categorize1{width: 100px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize2{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize3{width: 566px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize4{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+
+	.content1{width: 100px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.content2{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.content3{width: 566px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: none;   line-height: 33px; border: 1px solid #cccccc; text-indent: 10px;}
+	.content4{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.notice{margin-top: 20px; margin-bottom: 50px;} */
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,14 @@
+﻿body{background: url(../images/1420grid_cesco_service.png) no-repeat center top; opacity: 0.6;}
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; background: #dddddd;}
+
+section{width: 1420px; height: 4044px; margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1173px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+#contents_wrap{float: left; width: 1420px; height: 3898px; background: #eeeeee;}
+.content_banner{float: left; width: 1420px; height: 375px; margin-bottom: 20px; background: #dddddd;}
+.content_tab{float: left; width: 1420px; height: 2610px; background: #cccccc;}
+.content1{float: left; width: 1420px; height: 895px; background: #bbbbbb;}

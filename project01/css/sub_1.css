@@ -1,0 +1,16 @@
+﻿body{background: url(../images/1420grid_cesco_company.png) no-repeat center top; opacity: 0.6;}
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; background: #dddddd;}
+
+/* 섹션 */
+section{width: 1420px; height: 4044px; margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 129px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 782px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+#contents_wrap{float: left; width: 1420px; height: 3892px; background: #cccccc;}
+.content_banner{float: left; width: 1420px; height: 500px; background: #aaaaaa;}
+.content_tab{float: left; width: 1420px; height: 1200px; background: #bbbbbb;}
+.content1{float: left; width: 1420px; height: 1542px; background: #cccccc;}
+.content2{float: left; width: 1420px; height: 650px; background: #dddddd;}

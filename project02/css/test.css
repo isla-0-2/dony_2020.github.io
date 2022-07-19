@@ -1,0 +1,40 @@
+﻿/* body{background: url(../images/1420grid_cesco_main.png) no-repeat center top; opacity: 0.6;} */
+
+
+*{margin: 0; padding: 0; list-style: none;}
+body{padding: 1.5em 2em; line-height: 1.4; font-family: Arial, Helvetica, sans-serif;}
+.all{width: 610px;}
+.main_tab{float: left; clear: left;  width: 710px; height: 325px; background: #ffffff; border: 1px solid #dddddd;}
+.tabs{overflow: hidden; padding: 12px 12px 0; background: #ffffff;}
+.tabs li{float: left; padding: 0 2px 0 0;}
+.tabs li a{float: left; width: 169px; height: 40px; color: #666666; background: #eeeeee; /* display: none;  */text-decoration: none; text-align: center; line-height: 40px; }
+.tabs li a:hover{text-decoration: underline;}
+
+/* 처음부터 열어둘 패널 */
+.tabs li a.on{background: #ffffff; color: #333333; cursor: default; border: 1px solid #009aea; border-bottom: none;}
+.tabs li a.on:hover{text-decoration: none;}
+.tab_content{background: #ffffff; padding: 0 35px 0 35px; margin: -1px 13px 0 12px; width: 617px; height: 200px; border-top: 1px solid #009aea;}
+
+#tab_content1-1 a img{width: 85px; margin: 5px 17px;}
+#tab_content1-2 a img{margin: 5px 39px;}
+#tab_content1-3 a img{margin: 5px 49px;}
+#tab_content1-4 a img{margin: 5px 59px;}
+.tab_text_1{padding: 20px 118px;}
+.tab_text_2{padding: 20px 118px;}
+.tab_text_3{padding: 20px 130px;}
+.tab_text_4{padding: 20px 155px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

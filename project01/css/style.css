@@ -1,0 +1,157 @@
+﻿/* body{background: url(../images/1420grid_cesco_main.png) no-repeat center top; opacity: 0.6;} */
+
+#wrap{width: 1420px; margin: 0 auto; background: #dddddd;}
+
+
+/* 섹션 */
+section{width: 1420px; height: 1449px; background: #bbbbbb;}
+#slide_banner{width: 1420px; height: 566px; background: #aaaaaa; position: relative; margin: 0 auto; overflow: hidden; z-index: 100;}
+#slide_banner ul{width: 1420px; height:  566px; }
+#slide_banner ul .slideBanner01{width: 1420px; height: 566px; position: absolute; left: 0;}
+#slide_banner ul .slideBanner02{width: 1420px; height: 566px; position: absolute; left: -100%;}
+#slide_banner ul .slideBanner03{width: 1420px; height: 566px; position: absolute; left: -200%;}
+#slide_banner ul .slideBanner04{width: 1420px; height: 566px; position: absolute; left: 100%;}
+#slide_banner ul .slideBanner05{width: 1420px; height: 566px; position: absolute; left: 200%;}
+
+#content_wrap{float: left; width: 1420px; height: 883px; background: #999999;}
+.contents1{float: left; width: 473px; height: 233px; background: #999999; box-sizing: border-box;}
+	.content_Question_1{float: left; width:473px; height:42px; background: #48b1ed;}
+	.content_Question_1 img{display: block; margin-left: 35px; margin-top: 20px;}
+	.content1_1{float: left; width: 158px; height: 132px; background: #48b1ed;}
+	.content1_2{float: left; width: 158px; height: 132px; background: #48b1ed;}
+	.content1_3{float: left; width: 157px; height: 132px; background: #48b1ed;}
+	.content1_1 img{display: block; margin: 0 auto;}	
+	.content1_2 img{display: block; margin: 0 auto;}
+	.content1_3 img{display: block; margin: 0 auto;}
+	
+	.visitorButton1{float: left; width: 158px; height: 58px; background: #d9422a;}
+	.visitorButton2{float: left; width: 158px; height: 58px; background: #de5613;}
+	.visitorButton3{float: left; width: 157px; height: 58px; background: #e76d2b;}
+	.visitorButton1 img{display: block; margin: 0 auto; margin-top: 21px;}
+	.visitorButton2 img{display: block; margin: 0 auto; margin-top: 21px;}
+	.visitorButton3 img{display: block; margin: 0 auto; margin-top: 21px;}
+	
+.contents2{float: left; width: 473px; height: 233px; background: #eeeeee; box-sizing: border-box;}
+	.content_Question_2{float: left; width:473px; height:42px; background: #0284cf;}
+	.content_Question_2 img{margin-left: 35px; margin-top: 20px;}
+	.content2_1{float: left; width: 158px; height: 191px; background: #0284cf;}
+	.content2_2{float: left; width: 158px; height: 191px; background: #0284cf;}
+	.content2_3{float: left; width: 157px; height: 191px; background: #0284cf;}
+	.content2_1 img{display: block; margin: 0 auto; margin-top: 26px;}	
+	.content2_2 img{display: block; margin: 0 auto; margin-top: 28px;}
+	.content2_3 img{display: block; margin: 0 auto; margin-top: 25px;}	
+	
+.contents3{float: left; width: 473px; height: 233px; background: #bbbbbb;}
+	.content_Question_3{float: left; width:473px; height:42px; background: #29bab3;}
+	.content_Question_3 img{margin-left: 35px; margin-top: 20px;}
+	.content3_1{float: left; width: 158px; height: 191px; background: #29bab3;}
+	.content3_2{float: left; width: 158px; height: 191px; background: #29bab3;}
+	.content3_3{float: left; width: 157px; height: 191px; background: #29bab3;}
+	.content3_1 img{display: block; margin: 0 auto; margin-top: 30px;}	
+	.content3_2 img{display: block; margin: 0 auto; margin-top: 30px;}
+	.content3_3 img{display: block; margin: 0 auto; margin-top: 30px;}		
+	
+	
+.contents4{float: left; width: 710px; height: 325px; background: #ffffff; box-sizing: border-box; padding-left: 35px; padding-top: 35px;}
+	.tabTitle li{margin-bottom: 13px; }
+	.tab li{width: 158px; height: 40px; float: left; text-align: center; line-height: 2.9; background: #ffffff; color: #ffffff; border: 1px solid #dddddd; position: relative; bottom: -2px;}
+	.tab li.active{background: #ffffff; border: 1px solid #009aea; border-bottom: none; position: relative; bottom: -1px; z-index: 5;}
+	.tab li a{color: #666666;}
+	.tab_content{position: relative;}
+	.tab_content .pestControl01 ul li{letter-spacing: -1px;}
+	.tab_content .pestControl01 ul li a{float: left; display: block; width: 80%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #666666;}
+	.tab_content .pestControl01 ul li span{float: right; display: block; width: 15%; text-align: right; font-size: 14px; color: #666666;}
+	.tab_content > div{position: absolute; top: -1px; background: #ffffff; clear: both; width: 600px; height: 160px; border-top: 1px solid #009aea; font-size: 14px; padding: 15px 20px; letter-spacing: -1px; line-height: 2;}
+	/* .tab_content > div:last-child{display: none;} */
+	.tab_content .bugs1 ul li{float: left; padding-top: 3px; padding-left: 16px;}
+	.tab_content .bugs1 ul li img{width: 84px; margin-right: 20px; display: block;}
+	.Question1{width: 590px; height: 15px; background: #ffffff; padding-bottom: 25px; padding-top: 3px;}
+	.tab_content .bugs1 ul .Question1 img{display: block; width: 400px; margin: 0 auto; }
+	.tab_content .bugs1 ul li:last-child img{margin-right: 0px;}
+	
+.contents5{float: left; width: 237px; height: 325px; background: #aaaaaa;}
+.contents5 img{display: block;}
+.contents6{float: left; width: 291px; height: 325px; background: #bbbbbb; box-sizing: border-box;}
+.contents6 img{display: block;}
+.contents7{float: left; width: 182px; height: 325px; background: #cccccc;} 
+.contents7 img{display: block;}
+.contents8{float: left; width: 710px; height: 325px; background: #f3f3f3;}
+	.content8_1{float: left; width: 405px; height: 250px; background: #f3f3f3;}
+		.cesco_service_find_img_1{padding-left: 40px; padding-top: 32px;}
+		.cesco_service_find_img_2{padding-left: 40px; padding-top: 26px;}
+		.place{margin-left: 40px; width: 150px; height: 30px; font-size: 18px; margin-top: 10px; }
+		.cesco_service_find_img_3{padding-left: 40px; padding-top: 25px;}
+	.content8_2{float: left; width: 305px; height: 197px; background: #f3f3f3;}
+		.cesco_service_find_img_4{float: left; padding-top:100px;}
+		.cesco_service_find_img_5{float: left; padding-top:100px;}
+	.content8_3{float: left; width: 305px; height: 53px; background: #f3f3f3;}
+		.text1{float: left; padding-left: 40px; padding-top: 10px;}
+		.text1 span{font-size: 15px;}
+		.text2{float: left; padding-left: 60px; padding-top: 10px;}
+		.text2 span{font-size: 15px;}
+	.content8_4{float: left; width: 710px; height: 75px; background: #f3f3f3;}
+		.cesco_service_find_step_1{float: left; padding-top: 35px; padding-left: 30px;}
+		.cesco_service_find_step_2{float: left; padding-top: 35px; padding-left: 45px;}
+		.cesco_service_find_step_3{float: left; padding-top: 35px; padding-left: 45px;}
+		.cesco_service_find_step_4{float: left; padding-top: 35px; padding-left: 45px;}
+
+/* 	.cescoServiceFind1{float: left; width: 300px; height: 200px; background: #4cffd2;}
+	.cescoServiceFind2{float: left; width: 300px; height: 200px; background: #4c79ff;}
+		.whyCescoFindImg1{float: left;}
+		.whyCescoFindImg2{float: left;}
+	.cescoServiceFind2Text{float: left; width: 100px; height: 300px; background: #8000ff;}
+		.cescoServiceFind2 li .text1{display: block; float: left;}
+		.cescoServiceFind2 li .text2{display: block; float: left;}
+	.cescoServiceFind3{float: left; clear: both; width: 710px; height: 100px; background: #ff99e6;}
+		.whyCescoFindStep1{float: left;}
+		.whyCescoFindStep2{float: left;}
+		.whyCescoFindStep3{float: left;}
+		.whyCescoFindStep4{float: left;} */
+
+		/* 	.whyCescoFindTitle img{display: block; float: left; margin-bottom: 23px; box-sizing: border-box;}
+	.whyCescoFind1 img{display: block; float: left; clear: both; margin-bottom: 23px;}
+	.place{float: left; clear: left; width: 150px; height: 30px; font-size: 15px;}
+	.whyCescoFind1_2{display: block; float: left; clear: both; margin-top: 23px; margin-bottom: 50px;}
+	.whyCescoFindStep1{display: block; float: left; clear: both; margin-right: 30px;}
+	.whyCescoFindStep2{display: block; float: left; margin-right: 30px;}
+	.whyCescoFindStep3{display: block; float: left; margin-right: 30px;}
+	.whyCescoFindStep4{display: block; float: left; margin-right: 30px;}
+	.whyCescoFindImg1{display: block; float: right; position: absolute; bottom: 125px; left: 400px;}
+	.whyCescoFindImg2{display: block; float: left; position: absolute; bottom: 125px; left: 545px;}
+	.cescoServiceFind ul li {display: block; float: left; margin-left: 20px; padding-bottom: 50px;} */
+
+.contents9{float: left; width: 237px; height: 325px; /* background: #888888; */}
+.contents9 img{display: block;}
+.contents10{float: left; width: 473px; height: 325px; background: #ffffff; box-sizing: border-box;}
+	.contents10_1{float: left; width: 450px; height: 163px; background: #ffffff; position: relative; margin-left: 20px;}
+		.cescoReviewImg1{display:block; float: left; margin-top: 24px; margin-left: 10px; }
+		.cescoReviewImg2{display:block; float: left; clear: both; margin-top: 20px; margin-left: 10px; }
+		.cescoReviewImg3{display:block; float: right; position: absolute; right: -10px; top: 8px;}
+		.cescoReviewImg4{display:block; float: left; clear: both; margin-left: 10px; margin-top: 10px;}
+		.cescoReviewImg5{display:block; float: left; margin-left: 10px; margin-top: 10px;}
+	.contents10_2{float: left; width: 444px; height: 160px; margin-left: 15px; background: #ffffff; border-top: 1px solid #cccccc; position: relative}
+		.cescoQnAImg1{display:block; float: left; margin-top: 24px; margin-left: 16px; }
+		.cescoQnAImg2{display:block; float: left; clear: both; margin-top: 20px; margin-left: 16px; }
+		.cescoQnAImg3{display:block; float: right; position: absolute; right: 15px; top: 40px;}
+		.cescoQnAImg4{display:block; float: left; clear: both; margin-left: 16px; margin-top: 10px;}
+		.cescoQnAImg5{display:block; float: left; margin-left: 10px; margin-top: 10px;}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

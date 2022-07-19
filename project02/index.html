@@ -1,0 +1,802 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="Notepad++"/>	
+	<meta name="Author" content="박도원"/>
+	<meta name="Keywords" content="dowon portfolio, park dowon, isla, isla portfolio, cesco"/>
+	<meta name="Description" content="박도원의 포트폴리오 페이지 입니다(세스코)"/>
+	<title>cesco_main</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/common_style.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/common_script.js"></script>
+	<script>
+		$.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=c77adc63ce43aab8e298b4278d00816c&units=metric'
+		,function(data){
+			//alert(data.list[0].main.temp_max);
+			var minTemp = data.main.temp_min + '&deg;';
+			var maxTemp = data.main.temp_max + '&deg;';
+			var cTemp = data.main.temp + '&deg;';
+			<!-- alert(Date.now()); -->
+			var now = new Date(Date.now());
+			var month = now.getMonth()+1;
+			<!-- var cDate = now.getFullYear() +'년 '+ month + '월 '+ now.getDate() + '일 ' + now.getHours() + '시 ' + now.getMinutes() + '분 '; -->
+			var cYear = now.getFullYear() +'년 ';
+			var cMnD = month + '월 '+ now.getDate() + '일 ';
+			var ctime = now.getHours() + '시 ' + now.getMinutes() + '분 ';
+			var wIcon = data.weather[0].icon;
+			
+			$('.ctemp').append(cTemp);
+			$('.clowtemp').append(minTemp);
+			$('.chightemp').append(maxTemp);
+			$('.nowYear').append(cYear);
+		    $('.nowDate').append(cMnD);
+		    $('.nowTime').append(ctime);
+			<!-- $('.cicon').append('<img src="http://heesung66.dothome.co.kr/weather/weather_icon/'+wIcon+'.png" width="85"/>'); -->
+			$('.cicon').append('<img src="http://openweathermap.org/img/wn/10d@2x.png" width="100"/>');
+		});
+	</script>
+	<script>
+		// 숫자 자릿수 나누기
+		function unit(x){//1의 자리 숫자
+			var m = x%10
+			return m
+		}
+		function tenth(y){//10의 자리 숫자
+			var m = y/10%10
+			m=Math.floor(m)
+			return m
+		}
+		function hund(v){//100의 자리 숫자
+			var m = v/100
+			m = Math.floor(m)
+			return m
+		}
+		// 카운트 함수 정의 
+		function ddaycount(){
+			imgArr = [
+				'time_images/num0.png',
+				'time_images/num1.png',
+				'time_images/num2.png',
+				'time_images/num3.png',
+				'time_images/num4.png',
+				'time_images/num5.png',
+				'time_images/num6.png',
+				'time_images/num7.png',
+				'time_images/num8.png',
+				'time_images/num9.png'
+			]
+			doomsday = new Date('Janu 1, 2021 00:00:00')
+			today = new Date()
+			howfar = doomsday - today
+			if(howfar>0){
+				setTimeout('ddaycount()',1000)
+			}else{
+				clearTimeout('ddaycount()')
+				document.getElementById('countment').innerHTML='카운트가 종료되었습니다.'
+				return false
+			}
+			//하루 = 24시간 * 60분 * 60초 * 1000밀리초
+			days = Math.floor(howfar/(1000*60*60*24))
+			hours = Math.floor(howfar/(1000*60*60))
+			mins = Math.floor(howfar/(1000*60))
+			secs = Math.floor(howfar/(1000))
+			d = days // 1일 2시간 10분
+			h = hours-days*24
+			m = mins-hours*60
+			s = secs-mins*60
+			document.getElementById('day100').setAttribute('src',imgArr[hund(d)])
+            document.getElementById('day10').setAttribute('src',imgArr[tenth(d)]) 
+            document.getElementById('day1').setAttribute('src',imgArr[unit(d)]) 
+            document.getElementById("hour10").setAttribute("src", imgArr[tenth(h)]) 
+            document.getElementById("hour1").setAttribute("src", imgArr[unit(h)]) 
+            document.getElementById("min10").setAttribute("src", imgArr[tenth(m)]) 
+            document.getElementById("min1").setAttribute("src", imgArr[unit(m)]) 
+            document.getElementById("sec10").setAttribute("src", imgArr[tenth(s)]) 
+            document.getElementById("sec1").setAttribute("src", imgArr[unit(s)]) 
+			
+			if(d<10){d='00'+d}else if(d<100){d='0'+d}
+			if(h<10){h='0'+h}
+			if(m<10){m='0'+m}
+			if(s<10){s='0'+s}
+		}
+	</script>	
+</head>
+<body>
+	<div class="pop">
+		<body onLoad="ddaycount()">
+			<div id="countwrap">
+				<h2 id="countment">! 해충 박멸의 날 !</h2>
+				<img src="time_images/popup_bg.png" class="popup_bg" alt=""/>
+				<div class="counter">
+					<ul class="cf">
+						<li id="countD" class="firstli fl">
+							<img src="time_images/num0.png" width="30" id="day100" class="fl" />
+							<img src="time_images/num0.png" width="30" id="day10" class="fl" />
+							<img src="time_images/num0.png" width="30" id="day1" class="fl" />
+							<p></p>
+						</li>
+						<li class="fl">
+							<img src="time_images/day_bg3.png" width="9" id="middle" class="fl" />
+						</li>
+						<li id="counterH" class="fl">
+							<img src="time_images/num0.png" width="30" id="hour10" class="fl" alt="시간10의자리" />
+							<img src="time_images/num0.png" width="30" id="hour1" class="fl" alt="시간1의자리" />
+							<p></p>
+						</li>
+						<li class="fl">
+							<img src="time_images/day_bg3.png" width="" id="middle" class="fl" />
+						</li>
+						<li id="counterM" class="fl">
+							<img src="time_images/num0.png" width="30" id="min10" class="fl" alt="분10의자리" />
+							<img src="time_images/num0.png" width="30" id="min1" class="fl" alt="분1의자리" />
+							<p></p>
+						</li>
+						<li class="fl">
+							<img src="time_images/day_bg3.png" width="9" id="middle" class="fl" />
+						</li>
+						<li id="counterS" class="fl">
+							<img src="time_images/num0.png" width="30" id="sec10" class="fl" alt="분10의자리" />
+							<img src="time_images/num0.png" width="30" id="sec1" class="fl" alt="분1의자리" />
+							<p></p>
+						</li>
+						
+					</ul>
+					<button type="button">닫기</button>
+				</div>
+			</div>
+		</body>
+	</div>
+	<div class="weather">
+		<h1>Weather API</h1>
+		<div class="nowYear"></div>
+	    <div class="nowDate"></div>
+	    <div class="nowTime"></div>
+		<h2></h2>
+		<div class="ctemp"></div>
+		<div class="clowtemp">최저 온도 : </div>
+		<div class="chightemp">최고 온도 : </div>
+		<div class="cicon"><br/></div>
+	</div>
+	<header id="menuWrap">
+		<h2 class="hidden">세스코</h2>
+		<div class="oneInner">
+			<div class="navWrap">
+				<div class="hLogo" title="메인화면으로 이동합니다"><a href="index.html" tabindex="0"><img src="images/logo.gif" alt="메인로고"/></a></div>
+				<div class="hGnbWrap">
+					<div class="hGnb">
+						<ul>
+							<li><a href="sub_2/sub_2.html" tabindex="1">HOME</a></li>
+							<li><a href="sub_2/sub_2.html" tabindex="2">로그인</a></li>
+							<li><a href="sub_2/sub_2.html" tabindex="3">회원가입</a></li>
+							<li><a href="sub_2/sub_2.html" tabindex="4">ID/PW찾기</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="oneDepth cf">
+					<li><a href="sub_2/sub_2.html" tabindex="5">세스코</a>
+						<div class="twoInner">
+							<div class="twoDepth">
+								<ul class="depth2Menu1 cf">
+									<li class="cescoMenuWrap1 cf fl">
+										<dl>
+											<dt class="navTitle">세스코 소개</dt>
+											<dd><a href="sub_2/sub_2.html">회사소개</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 회장</a></dd>
+											<dd><a href="sub_2/sub_2.html">대표이사 사장</a></dd>
+											<dd><a href="sub_2/sub_2.html">CI</a></dd>
+											<dd><a href="sub_2/sub_2.html">오시는 길</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap2 cf fl">
+										<dl>
+											<dt class="navTitle">세스코 서비스</dt>
+											<dd><a href="sub_3/sub_3.html">WHY CESCO</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 통합해충방제 솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 비래해충 솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 통합이물분석 서비스</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 향균안전(Viruscare)솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 수질 안심관리 솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 공기질안심관리 솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 식품안전 솔루션</a></dd>
+											<dd><a href="sub_3/sub_3.html">세스코 환경위생 솔루션</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap3 fl">
+										<dl>
+											<dt class="navTitle">세스코 경쟁력</dt>
+											<dd><a href="sub_2/sub_2.html">세스코 경쟁력</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 서비스 컨설턴트 경쟁력</a></dd>
+										</dl>	
+										<ul>
+											<li class="menuAd1">세스코의 첨단기기로<br/>쾌적하고 위생적인 공간을<br/>만들어보세요.<br/></li>
+											<li class="menuAdImg1"><a href="sub_2/sub_2.html"><img src="images/gnb1_menu2_img.png" width="130" alt="광고1"/></a></li>
+											<li class="menuAdGo1"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuWrap4 fl">
+										<dl>
+											<dt class="navTitle">세스코 멤버스</dt>
+											<dd><a href="sub_2/sub_2.html">세스코 멤버스</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 멤버스 ZONE</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 홈멤버스 ZONE</a></dd>
+											<dd><a href="sub_2/sub_2.html">WHY 세스코멤버스</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap5 fl">
+										<dl>
+											<dt class="navTitle">인재채용</dt>
+											<dd><a href="sub_2/sub_2.html">인재상</a></dd>
+											<dd><a href="sub_2/sub_2.html">인사제도</a></dd>
+											<dd><a href="sub_2/sub_2.html">직무소개</a></dd>
+											<dd><a href="sub_2/sub_2.html">채용가이드</a></dd>
+											<dd><a href="sub_2/sub_2.html">서비스 컨설턴트 채용</a></dd>
+										</dl>
+									</li>
+								</ul> <!-- class="depth2Menu1" -->
+							</div> <!-- class="twoDepth" -->
+						</div> <!-- class="twoInner" -->
+					</li>
+					<li><a href="sub_2/sub_2.html" tabindex="6">서비스</a>
+						<div class="twoInner">
+							<div class="twoDepth">
+								<ul class="depth2Menu1 cf">
+									<li class="cescoMenuImgWrap1 fl">
+										<a href="sub_2/sub_2.html"><img src="images/nav_illust.png" width="200" alt="세스코 배너이미지"/></a>	
+									</li>
+									<li class="cescoMenuImgWrap2 fl">
+										<dl>
+											<dt class="navTitle">가정집</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceHome"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu2_img.png" width="200" alt="가정집"/></a></li>
+											<li class="serviceHomeGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									<li class="cescoMenuImgWrap3 fl">
+										<dl>
+											<dt class="navTitle">요식업 및 서비스업</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceShop"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu3_img.png" width="200" alt="요식업 및 서비스업"/></a></li>
+											<li class="serviceShopGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuImgWrap4 fl">
+										<dl>
+											<dt class="navTitle">판매 및 유통업</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceSell"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu4_img.png" width="200" alt="판매 및 유통업"/></a></li>
+											<li class="serviceSellGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuImgWrap5 fl">
+										<dl>
+											<dt class="navTitle">학교 및 교육시설</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceSchool"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu5_img.png" width="200" alt="학교 및 교육시설"/></a></li>
+											<li class="serviceSchoolGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuImgWrap6 fl">
+										<dl>
+											<dt class="navTitle">의료시설</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceMedical"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu5_img.png" width="200" alt="의료시설"/></a></li>
+											<li class="serviceMedicalGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuImgWrap7 fl">
+										<dl>
+											<dt class="navTitle">제조업</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceMaking"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu7_img.png" width="200" alt="의료시설"/></a></li>
+											<li class="serviceMakingGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+										
+									</li>
+									<li class="cescoMenuImgWrap8 fl">
+										<dl>
+											<dt class="navTitle">숙박업</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceSleep"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu8_img.png" width="200" alt="의료시설"/></a></li>
+											<li class="serviceSleepGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+									<li class="cescoMenuImgWrap9 fl">
+										<dl>
+											<dt class="navTitle">빌딩 및 공공기관</dt>
+											<dd></dd>
+										</dl>	
+										<ul>
+											<li class="serviceBuilding"><a href="sub_2/sub_2.html"><img src="images/gnb2_menu9_img.png" width="200" alt="의료시설"/></a></li>
+											<li class="serviceBuildingGo"><a href="sub_2/sub_2.html"><img src="images/btn_shortcut.png" width="75" alt="바로가기"/></a></li>
+										</ul>
+									</li>
+								</ul> <!-- class="depth2Menu1" -->
+							</div> <!-- class="twoDepth" -->
+						</div> <!-- class="twoInner" -->
+					</li>
+					<li><a href="sub_3/sub_3.html" tabindex="7">쇼핑</a></li>
+					<li><a href="sub_4/sub_4.html" tabindex="8">고객지원</a>
+						<div class="twoInner">
+							<div class="twoDepth">
+								<ul class="depth2Menu1 cf">
+									<li class="cescoMenuWrap6 fl">
+										<dl>
+											<dt class="navTitle">세스코 이용안내</dt>
+											<dd><a href="sub_2/sub_2.html">홈페이지 회원 가입안내</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 서비스 가입안내</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap7 fl">
+										<dl>
+											<dt class="navTitle">방문상담 신청</dt>
+											<dd><a href="sub_2/sub_2.html">이미지 넣기</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap8 fl">
+										<dl>
+											<dt class="navTitle">세스코 가입추천</dt>
+											<dd><a href="sub_2/sub_2.html">세스코 가입추천</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap9 fl">
+										<dl>
+											<dt class="navTitle">FAQ</dt>
+											<dd><a href="sub_2/sub_2.html">FAQ</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap10 fl">
+										<dl>
+											<dt class="navTitle">QnA</dt>
+											<dd><a href="sub_2/sub_2.html">QnA</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap11 fl cl">
+										<dl>
+											<dt class="navTitle">고객의 소리</dt>
+											<dd><a href="sub_2/sub_2.html">고객의 소리</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap12 fl">
+										<dl>
+											<dt class="navTitle">제품서비스 안내</dt>
+											<dd><a href="sub_2/sub_2.html">분쟁해결 기준</a></dd>
+											<dd><a href="sub_2/sub_2.html">보증기간 산정 기준</a></dd>
+											<dd><a href="sub_2/sub_2.html">유무상 처리 기준</a></dd>
+										</dl>
+									</li>
+								</ul> <!-- class="depth2Menu1" -->
+							</div> <!-- class="twoDepth" -->
+						</div> <!-- class="twoInner" -->
+					</li>
+					<li><a href="sub_2/sub_2.html" tabindex="9">세스코 광장</a>
+						<div class="twoInner">
+							<div class="twoDepth">
+								<ul class="depth2Menu1 cf">
+									<li class="cescoMenuWrap6 fl">
+										<dl>
+											<dt class="navTitle">고객리뷰</dt>
+											<dd><a href="sub_2/sub_2.html">고객리뷰</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap7 fl">
+										<dl>
+											<dt class="navTitle">세스코 지식인</dt>
+											<dd><a href="sub_2/sub_2.html">해충·미생물 정보</a></dd>
+											<dd><a href="sub_2/sub_2.html">생활위생정보</a></dd>
+											<dd><a href="sub_2/sub_2.html">위생관련법</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap8 fl">
+										<dl>
+											<dt class="navTitle">우리집 위생체크</dt>
+											<dd><a href="sub_2/sub_2.html">우리집 위생체크</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap9 fl">
+										<dl>
+											<dt class="navTitle">세스코 홍보</dt>
+											<dd><a href="sub_2/sub_2.html">TV광고</a></dd>
+											<dd><a href="sub_2/sub_2.html">인쇄광고</a></dd>
+											<dd><a href="sub_2/sub_2.html">키자니아 속 세스코</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap10 fl">
+										<dl>
+											<dt class="navTitle">QnA</dt>
+											<dd><a href="sub_2/sub_2.html">QnA</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap11 fl cl">
+										<dl>
+											<dt class="navTitle">이벤트</dt>
+											<dd><a href="sub_2/sub_2.html">이미지 넣기</a></dd>
+											<dd><a href="sub_2/sub_2.html">지난 이벤트</a></dd>
+											<dd><a href="sub_2/sub_2.html">당첨자 발표</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap12 fl">
+										<dl>
+											<dt class="navTitle">공지사항</dt>
+											<dd><a href="sub_2/sub_2.html">공지사항</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap13 fl">
+										<dl>
+											<dt class="navTitle">재미있는 곤충이야기</dt>
+											<dd><a href="sub_2/sub_2.html">이미지 넣기</a></dd>
+										</dl>
+									</li>
+								</ul> <!-- class="depth2Menu1" -->
+							</div> <!-- class="twoDepth" -->
+						</div> <!-- class="twoInner" -->
+					</li>
+					
+					
+					<li><a href="sub_2/sub_2.html" tabindex="10">MY세스코</a>
+						<div class="twoInner">
+							<div class="twoDepth">
+								<ul class="depth2Menu1 cf">
+									<li class="cescoMenuWrap1 fl">
+										<dl>
+											<dt class="navTitle">서비스 정보</dt>
+											<dd><a href="sub_2/sub_2.html">고객정보</a></dd>
+											<dd><a href="sub_2/sub_2.html">서비스대금 납부</a></dd>
+											<dd><a href="sub_2/sub_2.html">결제정보</a></dd>
+											<dd><a href="sub_2/sub_2.html">서비스리포트</a></dd>
+											<dd><a href="sub_2/sub_2.html">소독증명서</a></dd>
+											<dd><a href="sub_2/sub_2.html">물질안전보건자료(MSDS)</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap2 fl">
+										<dl>
+											<dt class="navTitle">나의 활동내역</dt>
+											<dd><a href="sub_2/sub_2.html">세스코 이용후기</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 가입추천</a></dd>
+											<dd><a href="sub_2/sub_2.html">세스코 서비스 컨설턴트 칭찬하기</a></dd>
+											<dd><a href="sub_2/sub_2.html">묻고 답하기</a></dd>
+											<dd><a href="sub_2/sub_2.html">무료방문상담</a></dd>
+											<dd><a href="sub_2/sub_2.html">고객의 소리</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap6 fl">
+										<dl>
+											<dt class="navTitle">멤버스로고 다운로드</dt>
+											<dd><a href="sub_2/sub_2.html">멤버스로고 다운로드</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap6 fl">
+										<dl>
+											<dt class="navTitle">회원정보 관리</dt>
+											<dd><a href="sub_2/sub_2.html">회원정보 관리</a></dd>
+										</dl>
+									</li>
+									<li class="cescoMenuWrap6 fl">
+										<dl>
+											<dt class="navTitle">회원탈퇴 신청</dt>
+											<dd><a href="sub_2/sub_2.html">회원탈퇴 신청</a></dd>
+										</dl>
+									</li>
+								</ul> <!-- class="depth2Menu1" -->
+							</div> <!-- class="twoDepth" -->
+						</div> <!-- class="twoInner" -->
+					</li>
+				</ul> <!-- class="oneDepth cf" -->
+			</div> <!-- class="navWrap" -->
+		</div> <!-- class="oneInner" -->
+	</header> <!-- id="menuWrap" -->			
+	<div id="wrap">
+		<section id="section" class="cf">
+			<h2 class="hidden">세스코</h2>
+			<div class="slide_banner_wrap">
+				<div id="slide_banner">
+					<img src="images/main_visual_1.jpg" class="slide_image" title="서비스" alt="메인슬라이드1"/>
+					<img src="images/main_visual_2.jpg" class="slide_image" title="서비스" alt="메인슬라이드2"/>
+					<img src="images/main_visual_3.jpg" class="slide_image" title="서비스" alt="메인슬라이드3"/>
+					<img src="images/main_visual_4_2.jpg" class="slide_image" title="서비스" alt="메인슬라이드4"/>
+					<img src="images/main_visual_5.jpg" class="slide_image" title="서비스" alt="메인슬라이드5"/>
+				</div>
+				<div class="control_panel">
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+				</div>
+			</div>
+			<div id="content_wrap">
+				<div class="contents1">
+					<div class="content_Question_1" ><img src="images/text_first_visit.gif" width="130" alt="처음오셨나요?"/></div>
+					<div class="content1_1" title="세스코 가상체험"><a href="sub_2/sub_2.html" tabindex="16"><img src="images/bl_tx01t_off.png" width="100" alt="세스코 가상체험"/></a></div>
+					<div class="content1_2" title="놀라운 세스코 이야기"><a href="sub_2/sub_2.html" tabindex="17"><img src="images/bl_tx02t_off.png" width="128" alt="놀라운세스코이야기"/></a></div>
+					<div class="content1_3" title="우리집 위생체크"><a href="sub_2/sub_2.html" tabindex="18"><img src="images/bl_tx03t_off.png" width="98" alt="우리집 위생체크"/></a></div>
+					<div class="visitorButton1" title="무료방문상담신청"><a href="sub_2/sub_2.html" tabindex="19"><img src="images/bl_tx01.png" width="110" alt="무료방문상담신청"/></a></div>
+					<div class="visitorButton2" title="견적상담신청"><a href="sub_2/sub_2.html" tabindex="20"><img src="images/bl_tx02.png" width="80" alt="견적상담신청"/></a></div>
+					<div class="visitorButton3" title="즉시계약신청"><a href="sub_2/sub_2.html" tabindex="21"><img src="images/bl_tx03.png" width="80" alt="즉시계약신청"/></a></div>
+				</div>
+				
+				<div class="contents2">
+					<div class="content_Question_2"><img src="images/text_place.gif" width="230" alt="세스코가 필요한 곳은 어디신가요?"/></div>
+					<div class="content2_1" title="가정집"><a href="sub_2/sub_2.html" tabindex="22"><img src="images/icon_first04_off.gif"  width="65" alt="가정집"/></a></div>
+					<div class="content2_2" title="요식업체"><a href="sub_2/sub_2.html" tabindex="23"><img src="images/icon_first05_off.gif" width="75" alt="요식업체"/></a></div>
+					<div class="content2_3" title="일반사업체"><a href="sub_2/sub_2.html" tabindex="24"><img src="images/icon_first06_off.gif" width="65" alt="일반사업체"/></a></div>
+				</div>
+				
+				<div class="contents3">
+					<div class="content_Question_3"><img src="images/text_cesco_member.gif" width="150" alt="세스코 회원이신가요?"/></div>
+					<div class="content3_1" title="소득증명서 출력"><a href="sub_2/sub_2.html" tabindex="25"><img src="images/icon_cesco_member01_off.gif" width="90" alt="소독증명서 출력"/></a></div>
+					<div class="content3_2" title="서비스리포트 출력"><a href="sub_2/sub_2.html" tabindex="26"><img src="images/icon_cesco_member02_off.gif" width="100" alt="서비스리포트 출력"/></a></div>
+					<div class="content3_3" title="세스코 가입추천"><a href="sub_2/sub_2.html" tabindex="27"><img src="images/icon_cesco_member03_off.gif" width="90" alt="세스코 가입추천"/></a></div>
+				</div>
+				<div class="contents4">
+					<ul class="tabTitle">
+						<li><img src="images/text_service_view.gif" width="200" alt="세스코 서비스 한 눈에 보기"/></li>
+					</ul>
+					<div class="main_tab">
+						<ul class="tabs">
+							<li><a href="#tab_content1-1" class="on">보행해충방제</a></li>
+							<li><a href="#tab_content1-2">비래해충방제</a></li>
+							<li><a href="#tab_content1-3">바이러스/박테리아</a></li>
+							<li><a href="#tab_content1-4">식품안전</a></li>
+						</ul>
+						<div class="panels">
+							<div class="tab_content" id="tab_content1-1" title="보행해충방제">
+								<div class="tab_text_1"><img src="images/text_service_tab_text1.gif" alt="보행해충 방제"/></div>
+								<a href="#"><img src="images/text_service_tab_pic1_off.gif" alt="개미"/></a>
+								<a href="#"><img src="images/text_service_tab_pic2_off.gif" alt="바퀴"/></a>
+								<a href="#"><img src="images/text_service_tab_pic3_off.gif" alt="쥐"/></a>
+								<a href="#"><img src="images/text_service_tab_pic4_off.gif" alt="빈대"/></a>
+								<a href="#"><img src="images/text_service_tab_pic5_off.gif" alt="진드기"/></a>
+							</div>
+							<div class="tab_content" id="tab_content1-2" title="비래해충방제">
+								<div class="tab_text_2"><img src="images/text_service_tab_text2.gif" alt="비래해충 방제"/></div>
+								<a href="#"><img src="images/text_service_tab_pic6.gif" alt="썬더블루"/></a>
+								<a href="#"><img src="images/text_service_tab_pic7.gif" alt="인셉터"/></a>
+								<a href="#"><img src="images/text_service_tab_pic8.gif" alt="피닉스"/></a>
+								<a href="#"><img src="images/text_service_tab_pic9.gif" alt="블루스톰"/></a>
+							</div>
+							<div class="tab_content" id="tab_content1-3" title="바이러스/박테리아">
+								<div class="tab_text_3"><img src="images/text_service_tab_text3.gif" alt="바이러스/박테리아"/></div>
+								<a href="#"><img src="images/text_service_tab_pic10.gif" alt="에어제닉"/></a>
+								<a href="#"><img src="images/text_service_tab_pic11.gif" alt="핸드제닉"/></a>
+								<a href="#"><img src="images/text_service_tab_pic12.gif" alt="프레쉬제닉"/></a>
+								<a href="#"><img src="images/text_service_tab_pic13.gif" alt="새니제닉"/></a>
+							</div>
+							<div class="tab_content" id="tab_content1-4" title="식품안전">
+								<div class="tab_text_4"><img src="images/text_service_tab_text4.gif" alt="식품안전"/></div>
+								<a href="#"><img src="images/text_service_tab_pic14.gif" alt="위생안전프로그램"/></a>
+								<a href="#"><img src="images/text_service_tab_pic15.gif" alt="시험분석"/></a>
+								<a href="#"><img src="images/text_service_tab_pic16.gif" alt="식품안전교육"/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents5">
+					<div class="content5_s">
+						<div class="whyCesco" title="왜 세스코일까?"><a href="sub_2/sub_2.html" tabindex="37"><img src="images/cont_why.png" width="239" alt="왜 세스코 멤버스일까?"/></a></div>
+					</div>
+				</div>
+				<div class="contents6">
+					<a href="sub_2/sub_2.html" tabindex="38"><img src="images/cont_banner01.png" width="293" alt="슬라이드미니배너"/></a>
+					<a href="sub_2/sub_2.html" class="alt" tabindex="38"><img src="images/cont_banner06_2.png" width="293" alt="슬라이드미니배너"/></a>
+					<a href="sub_2/sub_2.html" class="alt" tabindex="38"><img src="images/cont_banner07.jpg" width="293" alt="슬라이드미니배너"/></a>
+				</div>
+				<div class="contents7">
+					<div class="cescoCenter"><a href="sub_2/sub_2.html" tabindex="39"><img src="images/cont_banner_kolas.png" width="183" alt="이물분석센터"/></a></div>
+				</div>
+				<div class="contents8">
+					<div class="content8_1">
+						<ul class="cesco_service_find_1">
+							<li class="cesco_service_find_img_1" title="내게 맞는 서비스 찾기"><img src="images/text_my_cesco_find.gif" width="220" alt="내게 맞는 서비스 찾기"/></li>
+							<li class="cesco_service_find_img_2"><img src="images/text_my_cesco_find_step1_1.gif" width="300" alt="내게 맞는 서비스 찾기"/></li>
+							<select name="userEmail" id="cesco_service_find_select" class="place">
+								<option>피해장소</option>
+								<option value="가정집">가정집</option>
+								<option value="요식업 및 서비스업">요식업 및 서비스업</option>
+								<option value="판매 및 유통업">판매 및 유통업</option>
+								<option value="학교 및 교육시설">학교 및 교육시설</option>
+								<option value="의료시설">의료시설</option>
+								<option value="제조업">제조업</option>
+								<option value="숙박업">숙박업</option>
+								<option value="빌딩 및 공공기관">빌딩 및 공공기관</option>
+							</select>						
+							<li class="cesco_service_find_img_3"><img src="images/text_my_cesco_find_step1_2.gif" width="180" alt="에서 서비스가 필요하시군요"/></li>
+						</ul>
+					</div>
+					<div class="content8_2">
+						<ul class="cesco_service_find_2">
+							<li class="cesco_service_find_img_4"><img src="images/find_image_section.png" width="130" alt="find_img"/></li>
+							<li class="cesco_service_find_img_5"><img src="images/find_image_section.png" width="130" alt="find_img"/></li>
+						</ul>
+					</div>
+					<div class="content8_3">
+						<ul class="cesco_service_find_3">
+							<li class="text1"><span>피해장소</span></li>
+							<li class="text2"><span>피해분야</span></li>
+						</ul>
+					</div>
+					<div class="content8_4">
+						<ul class="cesco_service_find_4">
+							<li class="cesco_service_find_step_1"><img src="images/img_my_cesco_find_step1_on.gif" width="70" alt="step1On"/></li>
+							<li class="cesco_service_find_step_2"><img src="images/img_my_cesco_find_step2.gif" width="60" alt="step2"/></li>
+							<li class="cesco_service_find_step_3"><img src="images/img_my_cesco_find_step3.gif" width="60" alt="step3"/></li>
+							<li class="cesco_service_find_step_4"><img src="images/img_my_cesco_find_step4.gif" width="56" alt="result"/></li>
+						</ul>
+					</div>
+				</div>	
+				<div class="contents9">
+					<div class="cescoTvCf" title="세스코 광고"><a href="sub_2/sub_2.html" tabindex="40"><img src="images/PC_IndexMain_cf20150527.png" width="239" alt="TV광고"/></a></div>
+				</div>
+				<div class="contents10">
+					<div class="contents10_1">
+						<div class="cescoReviewImg1"><a href="sub_5/sub_5.html"><img src="images/cont_div01title.png" width="120" alt="세스코 이용후기"/></a></div>
+						<div class="cescoReviewImg2"><img src="images/cont_div01txt.png" width="230" alt="세스코 이용후기 멘트"/></div>
+						<div class="cescoReviewImg3"><img src="images/cont_div01img.png" width="180" alt="세스코 이용후기 이미지"/></div>
+						<div class="cescoReviewImg4" title="베스트이용후기"><a href="sub_2/sub_2.html" tabindex="41"><img src="images/cont_div01btn01_off.png" width="95" alt="BEST 이용후기"/></a></div>
+						<div class="cescoReviewImg5" title="이용후기"><a href="sub_2/sub_2.html" tabindex="42"><img src="images/cont_div01btn02_off.png" width="58" alt="이용후기"/></a></div>
+					</div>
+					<div class="contents10_2">
+						<div class="cescoQnAImg1"><a href="sub_5/sub_5.html"><img src="images/cont_div02title.png" width="153" alt="명불허전 세스코 QnA"/></a></div>
+						<div class="cescoQnAImg2"><img src="images/cont_div02txt.png" width="220" alt="명불허전 세스코 Q&A멘트"/></div>
+						<div class="cescoQnAImg3"><img src="images/cont_div02img.png" width="140" alt="명불허전 세스코 이미지"/></div>
+						<div class="cescoQnAImg4" title="베스트 QnA"><a href="sub_2/sub_2.html" tabindex="43"><img src="images/cont_div2btn01_off.png" width="85" alt="BEST QnA"/></a></div>
+						<div class="cescoQnAImg5" title="QnA"><a href="sub_2/sub_2.html" tabindex="44"><img src="images/cont_div2btn02_off.png" width="85" alt="QnA"/></a></div>
+					</div>
+				</div>
+			</div> <!-- id="content_wrap1" -->
+		</section>
+		<footer id="footer" class="cf">
+			<div class="f_notice">
+				<ul>
+					<li class="noticeTitle"><a href="../sub_1/sub_1.html">공지사항</a></li>
+					<li class="noticeContent"><a href="../sub_1/sub_1.html">세스코 첫 오프라인 매장 오픈 이벤트! [세스코 브랜드관 전자랜드 파워센터 대전본점]</a></li>
+					<li class="noticeDate">2020-11-09</li>
+				</ul>
+			</div>
+			<div class="f_sitemap">
+				<ul>
+					<li class="sitemap1">
+						<dl>
+							<dt>세스코</dt>
+							<dd><a href="sub_2/sub_2.html" tabindex="47">세스코소개</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="48">세스코서비스</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="49">세스코경쟁력</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="50">세스코멤버스</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="51">인재채용</a></dd>
+						</dl>
+					</li>
+					<li class="sitemap2">
+						<dl>
+							<dt>서비스</dt>
+							<dd><a href="sub_2/sub_2.html" tabindex="52">세스코 가상체험</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="53">가정집</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="54">요식업 및 서비스업</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="55">판매 및 유통업</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="56">학교 및 교육시설</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="57">의료시설</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="58">제조업</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="59">숙박업</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="60">빌딩 및 공공기관</a></dd>
+						</dl>
+					</li>
+					<li class="sitemap3">
+						<dl>
+							<dt>고객지원</dt>
+							<dd><a href="sub_2/sub_2.html" tabindex="61">세스코 이용안내</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="62">무료방문신청</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="63">견적상담신청</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="64">즉시계약신청</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="65">세스코 가입추천</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="66">FAQ</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="67">QnA</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="68">고객의소리</a></dd>
+						</dl>
+					</li>
+					<li class="sitemap4">
+						<dl>
+							<dt>세스코광장</dt>
+							<dd><a href="sub_2/sub_2.html" tabindex="69">고객리뷰</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="70">세스코 지식인</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="71">우리집 위생체크</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="72">세스코 홍보</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="73">이벤트</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="74">공지사항</a></dd>
+						</dl>
+					</li>
+					<li class="sitemap5">
+						<dl>
+							<dt>MY세스코</dt>
+							<dd><a href="sub_2/sub_2.html" tabindex="75">세스코 정보</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="76">나의 활동내역</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="77">멤버스로고다운로드</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="78">회원정보 관리</a></dd>
+							<dd><a href="sub_2/sub_2.html" tabindex="79">회원탈퇴 신청</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="f_button cf">
+				<div class="f_buttons">
+					<div class="f_button1 fl"><a href="sub_2/sub_2.html" tabindex="80"><img src="images/footer_btn01.png" alt="회사소개"/></a></div>
+					<div class="f_button1 fl"><a href="sub_2/sub_2.html" tabindex="81"><img src="images/footer_btn02.png" alt="인재채용"/></a></div>
+					<div class="f_button1 fl"><a href="sub_2/sub_2.html" tabindex="82"><img src="images/footer_btn03.png" alt="세스코R&D시스템"/></a></div>
+					<div class="f_button1 fl"><a href="sub_2/sub_2.html" tabindex="83"><img src="images/footer_btn04.png" alt="세스코식품안전사이트"/></a></div>
+				</div>
+			</div>
+			<div class="f_address cf">
+				<ul class="f_policy">
+					<li class="first"><a href="sub_2/sub_2.html" tabindex="84">개인정보처리방침</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="85">서비스이용약관</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="86">전자금융거래이용약관</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="87">영상정보처리기기운영관리방침</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="88">인재채용</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="89">고객지원</a></li>
+					<li><a href="sub_2/sub_2.html" tabindex="90">찾아오시는길</a></li>
+				</ul>
+				<ul class="f_address_end">
+					<li>(주)세스코(대표이사 사장 전찬혁) ㅣ 주소:서울시 강동구 상일로 10길 46번지 세스코 터치센터(우:05288)<br/>
+					사업자등록번호:212-81-05946 ㅣ 통신판매업신고번호:제2008-서울강동-0240호<br/>
+					고객센터:1588-1119(평일08:30~18:00, 토요일08:30~15:00, 일요일/공휴일 휴무) ㅣ FAX:(02)488-1742 ㅣ ⓒCESCO.ALL RIGHTS RESERVED.
+					</li>
+				</ul>
+			</div>
+			<!-- <p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;width:88px;height:31px"
+						src="//jigsaw.w3.org/css-validator/images/vcss"
+						alt="올바른 CSS입니다!" />
+				</a>
+			</p> -->
+		</footer>
+	</div>
+	<span class="quick_toggle"><span class="indent"></span></span>
+	<div class="quickmenu">
+		<h3 class="quickhead"><a href="#"><img src="images/quick_head.png" alt="Quickmenu"/></a></h3>
+		<ul class="quick_icon">
+			<li class="quick01"><a href="#"><img src="images/quick_01.png" alt="방문상담"/></a></li>
+			<li class="quick02"><a href="#"><img src="images/quick_02.png" alt="서비스안내"/></a></li>
+			<li class="quick03"><a href="#"><img src="images/quick_03.png" alt="세스코식품안전"/></a></li>
+			<li class="quick04"><a href="#"><img src="images/quick_04.png" alt="고객지원"/></a></li>
+			<li class="quick05"><a href="#"><img src="images/quick_05.png" alt="사이트맵"/></a></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

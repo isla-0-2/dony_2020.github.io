@@ -1,0 +1,47 @@
+﻿/* body{background: url(../../images/1420grid_cesco_faq.png) no-repeat center top; opacity: 0.6;} */
+*{margin: 0; padding: 0; border: 0; line-height: 1.4;}
+body{/* padding: 40px; */ font-family: Arial, Helvetica, sans-serif;}
+
+#wrap{width: 1420px; /* height: 3000px; */ margin: 0 auto; background: #dddddd;}
+
+section{width: 1420px; height: 1450px; margin: 0 auto;background: #ffffff;}
+/* 서브메뉴 */
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1044px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+/* FAQ배너 */
+.faq_title span{float: left; font-size: 30px; font-weight: bold; color: #888888; margin-top: 42px;  margin-bottom: 25px; margin-left: 5px;}
+.faq_banner{margin-bottom: 50px;}
+.faq_board{float: left; width: 1420px;/*  background: #ffffff; */}
+.faq_board dl{float: left; width: 1350px; margin: 0 0 20px; margin: 0 auto; margin-top: 35px;}
+.faq_board_contents dt{padding: 15px 10px; background: /* #ffffff */ url(../images/bg.png) repeat-y 100% 0; color: #777777; font-weight: bold; border-top: 1px solid #aaaaaa; font-size: 15px;}
+.faq_board_contents dd{padding: 19px 23px; width: 1304px; background: #f5f8fc; margin: -2px 0 3px; color: #777777;}
+
+/* 컨텐츠 */
+.faq_contents_wrap{width: 1420px; height: 1300px; /* background: #ffefbf; */}
+
+/* 탭 */
+.tabs{/* overflow: hidden; */ width: 1420px; height: 50px; /* padding: 12px 12px 0; */ /* background: #bfbfff; */}
+.tabs li{float: left; padding: 0 2px 0 0; margin-right: 2px;}
+.tabs li a{float: left; width: 232px; height: 52px; color: #777777; background: #eeeeee; /* display: none; */ text-decoration: none; text-align: center; line-height: 52px;}
+.tabs li a:hover{text-decoration: underline;}
+
+
+.tabs li a.on{background: #ffffff; color: #333333; cursor: default; border: 1px solid #009aea; border-bottom: none;}
+.tabs li a.on:hover{text-decoration: none;}
+.tab_content{background: #ffffff; padding: 0 35px 0 35px; margin: -1px 0 0 0; width: 1352px; height: px; border-top: 1px solid #009aea; /* background: #bfbfff; */}
+
+
+.FAQ_search_box{float: left; clear: left; width: 1350px; height: 48px; /* background: #eeeeee; */ border: 1px solid #cccccc; border-radius: 10px; margin-top: 30px; margin-bottom: 20px; padding: 33px 0 20px 30px;}
+	.FAQ_search_box input{padding: 5px; width: 300px; border: 1px solid #aaaaaa;}
+	.title_or_content{padding: 5px; width: 100px; border: 1px solid #aaaaaa;}
+	.search_btn{width: 100px; padding: 10px;}
+
+
+
+
+
+
+

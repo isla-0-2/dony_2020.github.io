@@ -1,0 +1,231 @@
+﻿html{overflow-y: scroll;}
+*{margin: 0px; padding: 0px;}
+ul, li, dl, dt, dd{list-style: none; text-decoration: none;}
+a{color: #ffffff; text-decoration: none;}
+body{font-family: '맑은 고딕', '돋움', sans-serif; /* font-weight: bold; */ font-size: 0.85em;}
+img{border: 0;}
+.cf:after{content: ''; display: block; clear: both;}
+h1{font-size: 1em;}
+.fl{float: left;}
+.cl{clear: left;}
+.hidden{display: none;}
+
+/* body{background: url(../images/1420grid_cesco_main.png) no-repeat center top; opacity: 0.6;} */
+
+.balloon{background: #ffffff; color: #666666; font-size: 11px; color: #777777; /* font-weight: bold; */ padding: 4px 10px; position: absolute;  display: none; border-radius: 18px; border: 2px solid #0087cc; box-shadow: 0 0 5px; #dddddd;}
+
+
+
+.oneInner{background: #ffffff; height: 120px; position: relative; left: 0px; top: 0px;}
+.navWrap{width: 1420px; height: 120px; margin: 0 auto; background:#ffffff;}
+	.hLogo{float: left; width: 115px; height: 68px; background: #ffffff; margin-top: 35px;}
+	.hLogo img{width: 102%; margin-left: 15px;}
+	.hGnbWrap{float: right; width: 672px; height: 50px; background: #ffffff; margin-bottom: 9px; margin-right: 17px;}
+	.hGnb{float: right;}
+	.hGnb ul li{float: left; width: 93px; height: 20px; text-align: center;}
+	.hGnb ul li a{display: block; margin-top: 33px; border-left: 1px solid #dddddd; color: #2693ff; font-size: 14px;}
+	
+.oneDepth{width: 675px; background: #ffffff; height: 50px; margin: 0 auto; float: right; padding-bottom: 11px;}
+.oneDepth>li{float: left; padding: 15px 6px;}
+.oneDepth>li>a{display: block; float: left; padding: 5px 15px; color: #000000;; font-size: 19px; font-weight: bold;}
+.oneDepth>li:hover .twoInner{display: block;}
+.twoInner{width: 100%; height: 500px; background: url(../images/nav_background_2.png); position: absolute; top: 120px; left: 0px; display: none; float: left; z-index: 1000;}
+.twoDepth{width: 1420px; /* background: #eeeeee; */ height: 500px; margin: 0 auto; }
+/* .twoDepth > ul{float: left; margin-top: 50px; margin-left: 54px; width: 16%; background: #ffffff;}	 */
+
+.depth2Menu1{width: 100%; height: 500px;}
+.depth2Menu1 li{margin-top: 20px; margin-left: 20px; /* background: #ffffff; */}
+.depth2Menu1 .cescoMenuWrap1{width: 260px; height: 400px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap1:hover{background: #fdfdff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap2{width: 260px; height: 400px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap2:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap3{width: 260px; height: 400px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap3:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap4{width: 260px; height: 400px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap4:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuWrap5{width: 260px; height: 400px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap5:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuWrap6{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap6:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuWrap7{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap7:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuWrap8{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap8:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuWrap9{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap9:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap10{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap10:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap11{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap11:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap12{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap12:hover{background: #eeeeee; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap13{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuWrap13:hover{background: #eeeeee; border-radius: 20px;}
+
+.depth2Menu1 .cescoMenuImgWrap1{width: 260px; height: 420px; background: #ffffff; border-radius: 20px;}
+/* .depth2Menu1 .cescoMenuImgWrap1:hover{background: #eeeeee; border-radius: 20px;} */
+.depth2Menu1 .cescoMenuImgWrap2{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap2:hover{background: #eeeeee; border-radius: 20px;}  
+.depth2Menu1 .cescoMenuImgWrap3{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap3:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap4{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap4:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap5{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap5:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap6{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap6:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap7{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap7:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap8{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap8:hover{background: #eeeeee; border-radius: 20px;} 
+.depth2Menu1 .cescoMenuImgWrap9{width: 260px; height: 200px; background: #ffffff; border-radius: 20px;}
+.depth2Menu1 .cescoMenuImgWrap9:hover{background: #eeeeee; border-radius: 20px;}
+
+.cescoMenuImgWrap1 img{margin-left: 35px; margin-top: 30px; }
+.cescoMenuImgWrap2 img{margin-left: 6px;}
+.cescoMenuImgWrap3 img{margin-left: 6px;}
+.cescoMenuImgWrap4 img{margin-left: 6px;}
+.cescoMenuImgWrap5 img{margin-left: 6px;}
+.cescoMenuImgWrap6 img{margin-left: 6px;}
+.cescoMenuImgWrap7 img{margin-left: 6px;}
+.cescoMenuImgWrap8 img{margin-left: 6px;}
+.cescoMenuImgWrap9 img{margin-left: 6px;}
+
+.cescoMenuImgWrap2 .serviceHomeGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap3 .serviceShopGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap4 .serviceSellGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap5 .serviceSchoolGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap6 .serviceMedicalGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap7 .serviceMakingGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap8 .serviceSleepGo{float: left; margin: -10px 0 0 85px;}
+.cescoMenuImgWrap9 .serviceBuildingGo{float: left; margin: -10px 0 0 85px;}
+
+.depth2Menu1 li dl{margin-left: 27px; margin-top: 23px; }
+.depth2Menu1 li dl .navTitle{width: 205px; padding-bottom: 10px; border-bottom: 1px solid #888888; margin-bottom: 20px; color: #555555; font-weight: bold; font-size: 19px;}
+.depth2Menu1 li dl dd a{display: block; padding-left: 5px; font-size: 13px; color: #888888; line-height: 25px; font-weight:bold;}
+.depth2Menu1 li dl dd a:hover{width: 200px; height: 25px; padding: 0px 5px; background: #0087cc; color: #ffffff; border-radius: 8px;}
+
+.cescoMenuWrap3 .menuAd1{margin-left: 30px; font-size: 0.8em; color: #bbbbbb;}
+.cescoMenuWrap3 .menuAdImg1{margin-left: 20px;}
+.cescoMenuWrap3 .menuAdGo1{float: right; margin-top: -50px; margin-right: 20px; }
+
+
+/* 푸터 */
+footer{width: 1420px; height: 490px; background: #ffffff;}
+.f_notice{float: left; width: 1420px; height: 40px; background: #f15c22;}
+/* .f_notice ul li{float: left; padding-top: 10px; padding-left: 20px;} */
+/* .f_notice ul li a{display:block; color: #ffffff; font-weight: bold;} */
+.f_notice .noticeTitle{float: left; font-size: 16px; font-weight: bold; margin-top: 9px; margin-left: 20px;}
+.f_notice .noticeContent{float: left; font-size: 13px; margin-top: 11px; margin-left: 20px;}
+.f_notice .noticeDate{float: right; padding-right: 20px; color: #ffffff; margin-top: 10px;}
+
+/* .f_sitemap{float: left; width: 947px; height: 280px;} */
+.f_sitemap{float: left; width: 947px; height: 280px; /* background: #0080ff; */ }
+.f_sitemap ul{float: right;}
+.f_sitemap ul li{padding-left: 19px; padding-top: 30px; }
+.f_sitemap ul li dl dt{color: #444444; font-size: 1.1em; padding-bottom: 10px; font-weight: bold;}
+.f_sitemap ul li dl dd a{line-height: 20px; display: block; color: #999999; font-size: 0.95em; /* font-weight: bold; */}
+	.sitemap1{float: left; width: 159px; height: 230px; }
+	.sitemap2{float: left; width: 159px; height: 230px; }
+	.sitemap3{float: left; width: 159px; height: 230px; }
+	.sitemap4{float: left; width: 159px; height: 230px; }
+	.sitemap5{float: left; width: 159px; height: 230px; }
+.f_button{float: right; width: 465px; height: 280px; background: #ffffff; padding: 30px 30px; margin: 0 auto; box-sizing: border-box;}
+	.f_button1{padding-right: 8px; padding-bottom: 4px;}
+	.f_buttons{float: right;}
+.f_address{float: left; width: 1420px; height: 170px; background: #ffffff; border-top: 1px solid #bbbbbb;}
+	.f_address .f_policy li{float: left; margin-left: 30px; margin-top: 36px;}
+	.f_address .f_policy li a{float: left; color: #555555; /* font-size: 0.75px; */}
+	.f_address .f_policy li.first a{float: left; color: #0284cf; font-weight: bold;}
+	.f_address .f_address_end{float: left; margin-top: 10px; margin-left: 30px;}
+	.f_address .f_address_end li{font-size: 0.85em; color: #555555;}
+	
+/* 퀵메뉴 */
+.quick_toggle{position: fixed; top: 0; right: 100px; width: 40px; height: 100px; background: url(../images/quick_close.png) no-repeat; display: block; cursor: pointer;}
+.quick_open{position: fixed; top: 0; right: 100px; width: 40px; height: 100px; background: url(../images/quick_open.png) no-repeat; display: block; cursor: pointer;}
+.quickmenu{position: fixed; top: 0px; right: 0px; width: 100px; height: 100%; background: #f3fbff; box-shadow: 0 0 6px #777777; z-index: 1000;}
+/* .quickmenu .quick_icon{padding-top: 10px;} */
+.quickmenu .quick_icon li{text-align: center;}
+
+
+/* 날씨 픽스드 */
+.weather{width: 100px; height: 290px; background-color: #0284cf; border: 2px solid #0284cf; padding: 13px; position: fixed; top: 120px; left: 100px; text-align: center; border-radius: 30px;}
+.weather > h1{display: none;}
+.nowYear, .nowDate, .nowTime{font-size: 20px; font-weight: bold; color: #ffffff;}
+.nowTime{margin-bottom: 10px;}
+.clowtemp, .chightemp{font-size: 14px; font-weight: bold; color: #eeeeee;}
+.ctemp{font-size: 40px; font-weight: bold; color: #ffd24c;}
+/* .cicon{width: 100px; height: 100px;background-color: #26acfd; border-radius: 100px;} */
+/* .depth2Menu1 .cescoMenuWrap1{float: left; width: 200px; height: 400px; background: #cfffbf;}
+.depth2Menu1 .cescoMenuWrap2{float: left; width: 200px; height: 400px; background: #cfffbf;} */
+
+
+
+	
+	
+
+/* .oneDepth{width: 672px; background: #ffffff; height: 50px; margin: 0 auto; float: right; padding-bottom: 11px;}
+.oneDepth>li{float: left; padding: 15px 6px;}
+.oneDepth>li>a{display: block; float: left; padding: 5px 15px; color: #000000;; font-size: 1.2em;}
+.oneDepth>li:hover .twoInner{display: block;}
+.twoInner{width: 100%; background: #eeeeee; height: 500px; position: absolute; top: 120px; left: 0px; display: none; float: left;}
+.twoDepth{width: 1420px; background: #eeeeee; height: 500px; margin: 0 auto;}
+.twoDepth > ul{float: left; margin-top: 50px; margin-left: 54px; width: 16%;}
+.twoDepth ul li h3{width: 180px; padding-bottom: 10px; border-bottom: 1px solid #aaaaaa;}
+.twoDepth ul li h3 span{font-size: 1.1em; color: #666666;}
+.twoDepth ul li h3 span:hover{color: #ffffff;}
+.twoDepth ul li h3{font-weight: bold; margin-bottom: 25px;}
+.twoDepth ul li{line-height: 30px;}-> 12점
+.twoDepth ul li a{display: block; color: #777777; font-size: 0.85em;}
+.twoDepth ul li a:hover{padding-left: 10px; background: #0087cc; width: 225px; height: 32px; border-radius: 8px; color: #ffffff; }
+.twoDepth .cesco_nav_depth2{margin-top: 50px; margin-bottom: 20px; font-size: 0.75em; line-height: 19px; color: #aaaaaa;}
+.depth2_img_btn_1 img{width: 50%; float: left;}
+.depth2_img_btn_go img{width: 32%; float: left; margin-top: 50px; margin-left: 10px;}
+.virtual_experience img{width: 62%; margin-top: 20px; margin-left: -12px;}
+
+.twoDepth .depth2_section_wrap{float: left; margin: 0; width: 100%;}
+.twoDepth .depth2_section_1{float: left; width: 284px; height: 400px; background: #bfdfff; }
+.twoDepth .depth2_section_2{float: left; width: 284px; height: 400px; background: #bfdfff; }
+.twoDepth .depth2_section_3{float: left; width: 284px; height: 400px; background: #bfdfff; }
+.twoDepth .depth2_section_4{float: left; width: 284px; height: 400px; background: #bfdfff; }
+.twoDepth .depth2_section_5{float: left; width: 284px; height: 400px; background: #bfdfff; }
+ */
+
+
+/* 헤더 */
+/* header{float: left;width: 1420px; height: 120px; background: #999999;}
+.h_logo{float: left; width: 115px; height: 68px; background: #eeeeee; margin-top: 35px;}
+.h_gnb{float: right; width: 250px; height: 25px; background: #dddddd; margin-top: 30px;}
+.h_nav{float: right; clear: right; width: 645px; height: 65px; background: #cccccc;} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

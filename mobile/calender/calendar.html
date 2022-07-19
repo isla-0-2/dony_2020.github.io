@@ -1,0 +1,226 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+	<link href='css/calendar.css' rel='stylesheet' />
+	<link href='css/style.css' rel='stylesheet' />	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/jquery.jqplot.min.css"/>
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src='js/calendar.js'></script>
+	<script src="js/jquery.jqplot.min.js"></script>	
+
+	<script src="js/jqplot.canvasTextRenderer.min.js"></script>
+	<script src="js/jqplot.canvasAxisLabelRenderer.min.js"></script>	
+	<script src="js/jqplot.dateAxisRenderer.js"></script>	
+	<script src="js/jqplot.highlighter.js"></script>	
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
+
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+		  editable: true,
+		  selectable: true,
+		  businessHours: true,
+		  dayMaxEvents: true, // allow "more" link when too many events
+<!-- 		  locale: 'ko', -->
+		  events: [
+				{
+				  title: '지리산',
+				  start: '2021-01-20'
+				},
+				{
+				  title: '한라산',
+				  start: '2021-01-05',
+				  end: '2021-01-07',
+				},
+				{
+				  groupId: 999,
+				  title: '수리산',
+				  start: '2021-01-15T09:00:00'
+				},
+				{
+				  title: '한라산',
+				  start: '2021-02-10',
+				  end: '2021-02-12' ,
+				},
+				{
+				  title: '관악산',
+				  start: '2021-02-23'
+				},
+				{
+				  title: '지리산 6시',
+				  start: '2021-03-15'
+				},
+				{
+				  title: '설악산',
+				  start: '2021-03-27T07:00:00'
+				},
+			]
+		});
+
+		calendar.render();
+		});
+		$(document).ready(function(){
+			var plot1 = $.jqplot ('chartdiv', [[2,1,3,4,3]], {
+				axesDefaults: {  
+					labelRenderer: $.jqplot.CanvasAxisLabelRenderer  
+				},
+				axes: {  
+					xaxis: { 
+						min:1,
+						max:5,
+						numberTicks: 5,					
+						renderer:$.jqplot.DataAxisRenderer,
+						tickOptions:{
+							formatString: '%d월',
+						}
+					},
+					yaxis: {  
+						min: 0,
+						max: 5,
+						numberTicks: 6,
+						tickOptions:{
+							formatString: '%d회',
+						}					
+					}
+				},
+				seriesDefaults: {
+					color: '#229c78',
+				},
+				grid: {
+					background: '#ffffff',
+				},	
+				cursor: {
+					show: 'true',
+				},
+			}); 
+		});		
+	</script>	
+	<style>
+		#calendar {
+			max-width: 400px;
+			margin: 0 auto;
+			background: #ffffff;
+			padding: 20px;
+			border-radius: 20px;
+			box-shadow: 3px 3px 5px #999999;
+			cursor: pointer;
+		}
+		.ui-icon-home:after{background-image: url(../img/home_on.png); background-size: 20px;}
+		.ui-icon-camera:after{background-image: url(../img/camera_on.png); background-size: 20px;}
+		.ui-icon-sns:after{background-image: url(../img/community_on.png); background-size: 20px;}
+		.ui-icon-shop:after{background-image: url(../img/shopping_on.png); background-size: 20px;}
+		.ui-icon-map:after{background-image: url(../img/real_time_on.png); background-size: 20px;}		
+		
+		
+	</style>	
+</head>
+<body>
+	<div data-role="page" id="calendar_page">
+		<div data-role="header" class="fixed_header" data-fullscreen="true" data-position="fixed">
+			<div class="prevBtn">
+				<a href="../index.html#my_climbing" data-ajax="false"><img src="../img/arrow_l.png" width="30" alt="" /></a>			
+			</div>
+			<h1><img src="../img/text_logo.png" width="100" alt="text_logo"/></h1>				
+		</div><!-- class="topMenu" -->
+		<div data-role="content">
+			<div id='calendar'></div>
+			<h2>나의 등산 일정</h2>
+			<div class="schedule_wrap">
+				<div class="schedule">
+					<div class="memo">
+						<p>3월 15일 오전 6:00<br/>용마산<span>인원 2명</span></p>
+					</div>
+					<div class="memo">
+						<p>3월 27일 오전 7:00<br/>설악산<span>인원 17명</span></p>
+					</div>
+					<a href="#add_schedule"><p>+<br/><span>일정 추가하기</span></p></a>
+				</div>
+			</div>
+			<h2>나의 등산 통계</h2>
+			<div class="chart_wrap">
+				<div id="chartdiv" style="height: 400px; width: 95%; margin: 0 auto;">
+				 <!-- 차트 표시 영역 -->
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer_wrap" data-theme="a" id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li class="map"><a href="#" data-role="button" data-icon="map" data-ajax="false" data-inline="true">지도</a></li>					
+					<li class="camera"><a href="#" data-role="button" data-icon="camera" data-ajax="false" data-inline="true">카메라</a></li>					
+					<li class="main"><a href="../index.html/#main_page" data-icon="home" data-role="button" data-ajax="false" data-inline="true">홈</a></li>
+					<li class="sns"><a href="../index.html/#sns_page" data-role="button" data-icon="sns" data-ajax="false" data-inline="true">커뮤니티</a></li>
+					<li class="shop"><a href="../index.html/#shopping1" data-role="button" data-icon="shop" data-ajax="false" data-inline="true">쇼핑</a></li>
+				</ul>
+			</div>
+		</div> <!-- 푸터 -->
+	</div>
+	<div data-role="page" id="add_schedule">
+		<div data-role="header" class="fixed_header" data-fullscreen="true" data-position="fixed">
+			<div class="prevBtn">
+				<a href="../index.html#my_climbing" data-ajax="false"><img src="../img/arrow_l.png" width="30" alt="" /></a>			
+			</div>
+			<h1><img src="../img/text_logo.png" width="100" alt="text_logo"/></h1>				
+		</div><!-- class="topMenu" -->
+		<div data-role="content">
+			<div class="top">
+				<span class="cancel"><a href="#calendar_page">취소</a></span>새로운일정<span class="save"><a href="#calendar_page">저장</a></span>
+			</div>		
+			<div data-role="fieldcontain" id="input1">
+				<label for="input1">제목</label>
+				<input type="text" name="input1" id="input1"/>
+				<label for="input2" class="cb">위치</label>
+				<input type="text" name="input2" id="input2"/>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="alram">하루종일</label>
+				<select name="alram" id="alram" data-role="slider">
+					<option value="on"></option>
+					<option value="off"></option>
+				</select>	
+				<label for="input4" class="cb">시작</label>
+				<input type="datetime-local" name="input4" id="input4""/>
+				<label for="input5" class="cb">종료</label>
+				<input type="time" name="input5" id="input5"/>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="input6" class="first">알림</label>
+				<select name="input6" id="input6" data-inline="true">
+					<option value="num0">15분전</option>
+					<option value="num1">1시간전</option>
+					<option value="num2">3시간전</option>
+					<option value="num3">6시간전</option>
+					<option value="num4">하루전</option>
+				</select>
+				<label for="input7" class="cb">두번째 알림</label>
+				<select name="input7" id="input7" data-inline="true">
+					<option value="num0_1">없음</option>
+					<option value="num1_1">15분전</option>
+					<option value="num2_1">1시간전</option>
+					<option value="num3_1">3시간전</option>
+					<option value="num4_1">6시간전</option>
+				</select>
+			</div>
+
+		</div>
+		<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer_wrap" data-theme="a" id="footer">
+			<div data-role="navbar">
+				<ul>
+					<li class="map"><a href="#" data-role="button" data-icon="map" data-inline="true">지도</a></li>					
+					<li class="camera"><a href="#" data-role="button" data-icon="camera" data-inline="true">카메라</a></li>					
+					<li class="main"><a href="#main_page" data-icon="home" data-role="button" data-inline="true">홈</a></li>
+					<li class="sns"><a href="#sns_page" data-role="button" data-icon="sns" data-inline="true">커뮤니티</a></li>
+					<li class="shop"><a href="#shopping1" data-role="button" data-icon="shop" data-inline="true">쇼핑</a></li>
+				</ul>
+			</div>
+		</div> <!-- 푸터 -->
+	</div><!-- id="wrap" -->
+</body>
+</html>

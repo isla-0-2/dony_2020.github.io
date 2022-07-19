@@ -1,0 +1,73 @@
+﻿/* body{background: url(../../images/1420grid_cesco_shopping.png) no-repeat center top; opacity: 0.6;} */
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; /* background: #dddddd; */}
+h2{display: none;}
+
+section{width: 1420px; height: 3679px; margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1044px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+#contents_wrap{float: left; width: 1420px; height: 3527px; background: #eeeeee;}
+.product_banner{float: left; width: 1420px; height: 635px; margin-bottom: 90px; background: #dddddd;}
+	.product_banner_left{float: left; width: 265px; height: 635px; background: #444444;}
+		.left_1{margin-left: 25px; margin-top: 50px; margin-bottom: 50px;}
+			.left_text_1_1{font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #ffffff;}
+			.left_text_1_2{font-size: 15px; font-weight: bold; margin-bottom: 20px; color: #ffffff;}
+			.left_text_1_2 ul li{margin-top: 5px;}
+		.left_2{margin-left: 25px; margin-top: 50px; margin-bottom: 50px;}
+			.left_text_2_1{font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #ffffff;}
+			.left_text_2_2{font-size: 15px; font-weight: bold; margin-bottom: 20px; color: #ffffff;}
+			.left_text_2_2 ul li{margin-top: 5px;}
+	
+	.product_banner_right{float: left; width: 1155px; height: 635px; /* background: #ff26ff; */}
+
+.product_best{float: left; width: 1420px; height: 580px;/*  background: #cccccc; */}
+	.product_best_title{float: left; width: 1420px; height: 55px; /* background: #ffff26; */ border-bottom: 5px solid #666666;}
+		.product_best_title span{font-weight: bold; font-size: 30px; color: #000000;}
+	.product_best_banner{float: left; width: 390px; height: 520px;/*  background: #ff4cd2; */}
+	.product_best_1{float: left; width: 328px; height: 520px; /* background: #7396ff; */ margin-right: 23px;}
+		.product_best_1 img{border: 1px solid #bbbbbb; margin-top: 20px;}
+		.product_best_1 a span{display: block; text-align: center; font-size: 20px; font-weight: bold; margin-top: 30px; color: #000000;}
+	.product_best_2{float: left; width: 328px; height: 520px; /* background: #2693ff */ ;margin-right: 23px; color: #000000;}
+		.product_best_2 img{border: 1px solid #bbbbbb; margin-top: 20px;}
+		.product_best_2 a span{display: block; text-align: center; font-size: 20px; font-weight: bold; margin-top: 30px; color: #000000;}	
+	.product_best_3{float: left; width: 328px; height: 520px; /* background: #99ccff; */}
+		.product_best_3 img{border: 1px solid #bbbbbb; margin-top: 20px;}
+		.product_best_3 a span{display: block; text-align: center; font-size: 20px; font-weight: bold; margin-top: 30px; color: #000000;}
+	
+	
+.product_ad_banner{float: left; width: 1420px; height: 265px; background: #bbbbbb; margin-bottom: 103px;}
+
+.product_list{float: left; width: 1420px; height: 2005px; /* background: #00a3d9; */}
+	.product_list_title{float: left; width: 1420px; height: 55px; /* background: #ffff26; */ border-bottom: 5px solid #666666;}
+		.product_list_title span{font-weight: bold; font-size: 30px; color: #000000;}
+	.product_list_1_floor{float: left; width: 1420px; height: 625px; margin-top: 20px;}
+	.product_list_1{float: left; width: 352px; height: 625px; background: #ffffff; border-right: 1px solid #eeeeee;}
+	.product_list_2{float: left; width: 352px; height: 625px; background: #ffffff; border-right: 1px solid #eeeeee;}
+	.product_list_3{float: left; width: 352px; height: 625px; background: #ffffff; border-right: 1px solid #eeeeee;}
+	.product_list_4{float: left; width: 352px; height: 625px; background: #ffffff;}
+	
+	.product_img img{display: block; margin: 0 auto; margin-top: 25px; margin-left: 26px;  border: 1px solid #dddddd;}
+	.product_text_1 a{display: block; margin-top: 50px; margin-left: 30px; font-size: 20px; font-weight: bold; color: #222222;}
+	.product_text_2{display: block; margin-top: 50px; margin-left: 30px; font-size: 16px; font-weight: bold; color: #222222;}
+	.product_text_star{display: block; margin-top: 15px; margin-left: 30px;}
+	.product_text_star img{width: 19px; padding-right: 2px;}
+	.product_text_3{display: block; margin-top: 10px; margin-left: 30px; font-size: 16px; font-weight: bold; color: #222222;}
+	.product_text_3 span{font-size: 20px; font-weight: bold; color: #ffa64c;}
+	.product_text_4{margin-top: 2px; margin-left: 30px; font-size: 16px; font-weight: bold; color: #222222;}
+	.product_text_4 span{font-size: 20px; font-weight: bold; color: #4c79ff;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

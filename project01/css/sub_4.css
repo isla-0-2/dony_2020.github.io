@@ -1,0 +1,14 @@
+﻿body{background: url(../images/1420grid_cesco_customer.png) no-repeat center top; opacity: 0.6;}
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; background: #dddddd;}
+
+section{width: 1420px; height: 2259px; margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1044px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+#contents_wrap{float: left; width: 1420px; height: 3527px; background: #eeeeee;}
+.advice_banner{float: left; width: 1420px; height: 362px; margin-bottom: 47px; background: #dddddd;}
+.advice_request{float: left; width: 1420px; height: 1430px; background: #cccccc;}
+.advice_info{float: left; width: 1420px; height: 315px; background: #bbbbbb;}

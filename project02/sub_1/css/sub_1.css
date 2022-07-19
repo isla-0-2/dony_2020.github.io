@@ -1,0 +1,65 @@
+﻿/* body{background: url(../images/1420grid_cesco_company.png) no-repeat center top; opacity: 0.6;} */
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; /* background: #dddddd; */}
+
+/* 섹션 */
+/* section{width: 1420px; height: 4044px; margin: 0 auto;background: #ffffff;} */
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 129px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 782px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+#contents_wrap{float: left; width: 1420px; height: 3980px; /* background: #cccccc; */}
+.content_banner{float: left; width: 1420px; height: 500px; /* background: #aaaaaa; */}
+	.content_banner_space{float: left; width: 1420px; height: 100px; background: #ffffff; margin-bottom: 13px;}
+	.content_banner_imgs{float: left; width: 1420px; height: 400px; background: #ffffff;}
+	.company_title img{float: left; margin-top: 60px;}
+
+/* 탭 */
+.content_tab_wrap{float: left; width: 1380px; margin: 0 auto; /* height: 1200px */; /* background: #bbbbbb; */}
+.content_space{margin-top: 50px;}
+.main_tab{float: left; clear: left;  width: 1380px; background: #ffffff;}
+.tabs{overflow: hidden; padding: 50px 0 0; background: #ffffff;}
+.tabs li{float: left; padding: 0 2px 0 0;}
+.tabs li a{float: left; width: 240px; height: 50px; color: #666666; background: #eeeeee; /* display: none;  */text-decoration: none; text-align: center; line-height: 50px; font-weight: bold; font-size: 16px;}
+.tabs li a:hover{text-decoration: underline;}
+
+/* 처음부터 열어둘 패널 */
+.tabs li a.on{background: #ffffff; color: #333333; cursor: default; border: 1px solid #009aea; border-bottom: none;}
+.tabs li a.on:hover{text-decoration: none;}
+.tab_content{background: #ffffff; width: 1380px; text-align: center;  border-top: 1px solid #009aea; margin: -1px 0 0 0;}
+.tab_content img{width: 1320px; margin-top: 50px;}
+
+
+	
+.content1{float: left; width: 1420px; /* background: #ffefbf; */ }
+	.vision_img{display: block; margin-left: 13px;}
+.content2{float: left; width: 1402px; /* background: #ffefbf; */ padding-left: 18px;}
+	.mission_img_1{display: block; float: left; margin-bottom: 5px; margin-left: 10px;}
+.content2{float: left; width: 1402px; /* background: #ffefbf; */ padding-left: 7px;}
+.content3{float: left; width: 1402px; /* background: #ffefbf; */ padding-left: 18px;}
+.content4{float: left; width: 1402px; /* background: #ffefbf; */ padding-left: 18px;}
+.content5{float: left; width: 1402px; /* background: #ffefbf; */ padding-left: 18px;}
+
+
+
+.cesco_business_1{font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 25px; margin-left: 10px; margin-top: 50px;}
+.cesco_caws_1{font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 25px; margin-left: 10px; margin-top: 50px;}
+.cesco_mission_1{font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 25px; margin-left: 10px; margin-top: 50px;}
+.cesco_values_1{font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 25px; margin-left: 10px; margin-top: 50px;}
+.cesco_vision_1{font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 25px; margin-left: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

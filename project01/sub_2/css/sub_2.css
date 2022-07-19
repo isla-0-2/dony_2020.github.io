@@ -1,0 +1,136 @@
+﻿/* body{background: url(../../images/1420grid_cesco_service.png) no-repeat center top; opacity: 0.6;} */
+
+
+#wrap{width: 1420px; height: 3000px; margin: 0 auto; /* background: #dddddd; */}
+h2{display: none;}
+section{width: 1420px; /* height: 4044px; */ margin: 0 auto; background: #ffffff;}
+/* #sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav{float: right; width: 1173px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;} */
+
+
+#contents_wrap{float: left; width: 1420px; /* height: 3898px; */ background: #ffffff;}
+.content_banner{float: left; width: 1420px; height: 375px; margin-bottom: 20px; background: #ffffff;}
+.content_tab_wrap{float: left; width: 1420px; height: 1200px; /* background: #bbbbbb; */}
+	.content_space{float: left; width: 1420px; height: 90px; background: #ffffff; margin-bottom: 5px;}
+		.summary_title img{float: left; margin-top: 40px;}
+		
+	.content_tab{float: left; width: 1420px; /* height: 1110px; background: #ffffff; */ }
+	/* .contents{float: left; width: 710px; height: 325px; background: #ffffff; box-sizing: border-box; padding-left: 35px; padding-top: 35px;} */
+	.tab li{width: 470px; height: 47px; float: left; text-align: center; line-height: 2.8; /* background: #eeeeee; */ color: #ffffff; border: 1px solid #ffffff; bottom: -2px; border-bottom: none; }
+	.tab li.active{background: #ffffff; border: 1px solid #009aea; border-bottom: none; bottom: -4px;}
+	.tab li a{color: #666666; font-weight: bold; font-size: 16px;}
+	/* .tab_content .tab_content_1{width: 1420px; height: 945px; background: #ffffff; border-top: 1px solid #009aea; bottom: -4px;} */
+
+.tab_contents_wrap{width: 1420px; height: 1840px; background: #ffffff;}
+.tab_content_1{width: 1420px; height: 150px; /* background: #ffefbf; */ border-top: 1px solid #009aea; bottom: -4px;}
+	.tab_content_1 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_1 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_1 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_2{width: 1420px; height: 115px; /* background: #ffefbf; */ bottom: -4px;}
+	.tab_content_2 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_2 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_2 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_3 ul li{display: block; float: left; margin-right: 15px;}
+.tab_content_4{float: left; width: 1420px; height: 680px; /* background: #79ff4c; */}
+	.tab_content_4 ul{margin-left: 20px; margin-top: 50px;}
+	.tab_content_4 ul li{margin-left: 20px; font-size: 17px; color: #777777;}
+	.tab_content_4 ul li span{display: block; font-size: 20px; font-weight: bold; color: #666666; margin-bottom: 17px;}
+.tab_content_4_inner{float: left; width: 1330px; height: 500px; background: #f7f7f7; margin-left: 20px; margin-top: 20px; border-radius: 10px; border: 1px solid #bbbbbb; padding-left: 46px;}
+.tab_content_4_inner ul li{float: left; margin-right: 70px; }
+.tab_content_5{width: 1420px; height: 115px; /* background: #ffefbf; */ bottom: -4px;}
+	.tab_content_5 ul{margin-left: 20px; margin-top: 35px;}
+	
+	.tab_content_5 ul li{display: block; font-size: 15px; font-weight: bold; color: #666666; margin-left: 25px; margin-bottom: 10px;}
+	.tab_content_5 .strong_1{margin-left: 20px; font-size: 20px; font-weight: bold; color: #777777;}
+	.tab_content_5 .strong_2{margin-left: 25px; font-size: 17px; font-weight: bold;color: #777777;}
+	.inner_img_1 img{margin-bottom: 10px;}
+	.inner_img_2 img{margin-left: 26px; margin-bottom: 10px;}
+	.inner_img_3 img{margin-left: 26px; margin-bottom: 10px;}
+	
+	
+/* 게시판 */	
+#board_wrap{float: left; width: 1420px; height: 650px; /* background: #bfffcf; */}	
+	.cesco_review_1{font-size: 25px; font-weight: bold; color: #0087cc; margin-bottom: 10px;}
+	.cesco_review_2{font-size: 15px; font-weight: bold; color: #999999; margin-bottom: 30px;}
+#QnAboard{margin: 0 auto;}
+
+/* 게시판 목록 */
+#board > .first{clear: both; background-color: #ff9900; border-radius: 10px 10px 0 0; color: #efefef; font-weight: bold; text-shadow: 0 0 1px #ffffff;}
+#board > .first .title1{border-radius: 10px 0 0 0;}
+#board > .first .title4{border-radius: 0 10px 0 0;}
+#board > div:hover{background-color: #ffffee;}
+#board > div input{display: none;}
+#board > .first > div{line-height: 50px; height: 50px; text-align: center; float: left;}
+#board > div > div{width: 100px; line-height: 50px; height: 50px; text-align: center; float: left; border-bottom: 1px dotted #ff9900;}
+#board >div:hover > div{background-color: #efefef;}
+#board > .first:hover > div{background-color: #ff9900;}
+ 
+/* 게시판 세부 목록 */
+#board .title2{width: 500px; text-align: justify;}
+#board .content_wrap{height: auto; width: 96%; text-align: left; padding: 2%; display: none;}
+
+#board input:checked ~ div.content_wrap{display: block;}
+#board input:checked ~ div.title2 > label{cursor: default;}
+#board label{cursor: pointer; line-height: 50px; height: 50px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.subject{text-align: justify; font-weight: bold; font-size: 16px; background: #dfdfdf; padding: 10px 20px; line-height: 26px;}
+.content{text-align: justify; padding: 10px 20px; background: #ffffff; line-height: 24px; border-bottom: 1px solid #dddddd;}
+
+
+	
+
+/* 보행해충 방제 솔루션! WHY 세스코! */
+.customer_service_content{float: left; width: 1420px; height: 500px; /* background: #ffffbf; */ margin-bottom: -9px;}
+.customer_service_content_title{margin-top: 20px; margin-bottom: 20px; font-size: 17px; font-weight: bold; color: #666666;}
+	.why_cesco_wrap_1{float: left; width: 284px; height:300px; /* background: #cfbfff; */ text-align: center;}
+		.why_cesco_1 img{margin-bottom: 15px;}
+		.why_cesco_1_text_1{font-size: 15px; font-weight: bold; color: #666666; margin-bottom: 8px;}
+		.why_cesco_1_text_2{font-size: 14px; color: #777777;}
+
+
+.customer_service_number{width: 1420px; margin-bottom: 50px;}	
+.cesco_service_btn{text-align: center;}
+
+
+
+
+
+/* 	.tapMenu1{height: 42px; width: 200px; margin: 0 auto; text-align: center; border: 3px solid #0093e8; line-height: 39px; color: #0093e8; font-weight: bold; }
+	.tapMenu2{height: 45px; width: 200px; background-color: #f5f5f5; margin: 0 auto; text-align: center; line-height: 39px; color: #0093e8; font-weight: bold; }
+	.categorize1{width: 100px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize2{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize3{width: 566px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+	.categorize4{width: 185px; height: 40px; background-color: #f5f5f5; font-weight: bold; color: #888888; text-align: center; line-height: 35px; border: 1px solid #cccccc; }
+
+	.content1{width: 100px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.content2{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.content3{width: 566px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: none;   line-height: 33px; border: 1px solid #cccccc; text-indent: 10px;}
+	.content4{width: 185px; height: 36px; background-color: #ffffff; font-weight: bold; color: #888888; text-align: center; line-height: 33px; border: 1px solid #cccccc;}
+	.notice{margin-top: 20px; margin-bottom: 50px;} */
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

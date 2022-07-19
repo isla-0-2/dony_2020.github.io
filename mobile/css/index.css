@@ -1,0 +1,11 @@
+﻿*{margin: 0; padding: 0; outline:none;}
+html{overflow-y: scroll;}
+body{font-family: 'Noto Sans KR', 'Malgun Gothic', 'Dotum' sans-serif;}
+ul, li{list-style: none; }
+.fl{float: left;}
+.fr{float: right;}
+.cf:after{clear: both; float: left; content:"";}
+
+#login{width: 100%;}
+
+#login #box1 fieldset{border: none;}

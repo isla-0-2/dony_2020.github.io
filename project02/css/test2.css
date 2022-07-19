@@ -1,0 +1,70 @@
+﻿/* body{background: url(../images/1420grid_cesco_company.png) no-repeat center top; opacity: 0.6;} */
+
+
+section{width: 1420px; height: 1982px; margin: 0 auto;background: #ffffff;}
+#sub_nav_wrap{float: left; width: 1420px; height: 152px; background: #eeeeee;}
+.sub_nav_banner{float: left; width: 225px; height: 118px; background: #dddddd;}
+.sub_nav_banner img{margin-top: 10px;}
+.sub_nav{float: right; width: 1044px; height: 118px; background: #dddddd;}
+.sub_selectform{float: left; width: 1420px; height: 35px; background: #bbbbbb;}
+
+
+/* 기본 레이아웃 */
+body{overflow-x:hidden;}
+#wrap{width: 1420px; margin: 0 auto; background-color: #ffffff; position: relative;}
+#header{height: 181px; position: relative; z-index: 10;}
+
+/* 기본 글꼴 및 링크 텍스트 꾸미기 */
+body{font-size: 12px; font-family: 'Nanum Gothic', gulim, "굴림", sans-serif; color: #333333; background-color: #999999; min-width: 1600px;}
+select, input, textarea, button{font: 12px gulim, "굴림", sans-serif; color: #333333;}
+a{color: #333333; text-decoration: none;}
+.fl{float:left;}
+.fr{float:right;}
+.cf:after{content: ' '; display: block; clear:both;}
+.hide, legend, caption, hr{position: absolute; left: -99999px; width: 0; height: 0; overflow: hidden; text-indent: -99999px;}
+.ellipsis {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+h2{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+p{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.wrap01{width: 106px;}
+li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+/* 헤더 영역 로고 */
+#header h1{position: absolute; left: 50%; top: 36px; margin-left: -57px;} 
+
+/* GNB 영역 */
+#gnb_wrap{width: 785px; height: 118px; /* background: #555555; */ position: absolute; top: 0px; right: 0; z-index: 100;}
+#gnb{width: 1101px; height: 47px; margin: 0 auto;}
+#gnb > li{float: left; text-align: center; width: 98px; height: 87px; padding: 16px; border-right: 1px solid #aaaaaa;}
+#gnb li.fir{border-left: 1px solid #aaaaaa;}
+#gnb>li>a{font-size: 13px; color: #ffffff; font-weight: bold;}
+#gnb ul{position: relative; background-color: #ffffff; width: 114px; top: 87px; left: -16px; line-height: 36px; text-align: center; display: none;}
+#gnb ul li {background-color: #f7f5f8; border: none; border-bottom: 1px solid #aaaaaa;}
+#gnb>li:hover{background: #ffbfbf;}
+#gnb>li:hover ul{display: block;}
+#gnb>li>ul>li:hover{background-color: #7b4ea7;}
+#gnb>li>ul>li:hover a{color: #ffffff;}
+
+#total_btn{position: absolute; bottom: 0px; right: 275px; height: 47px; width: 39px; border-right: 1px solid #aaaaaa;}
+#total_btn img{margin-top: 19px;}
+
+
+/* 코딩 안 해도 되는 영역 */
+/* 전체 메뉴 영역 */
+#total_menu{width:1075px; height: 189px; background: #ededed; position: absolute; top: 181px; left: 250px;  display: none; display: block;}
+#total_menu dl{float: left; margin: 15px 0px;}
+#total_menu dt{font-size: 0px;}
+#total_menu dd{border-right: 1px solid #cccccc; width: 112px; height: 154px;}
+#total_menu li{line-height: 31px; text-align: center;}
+#total_close{position: absolute; bottom: 12px; right: 34px;}
+
+
+
+
+
+
+
+
+
+
+

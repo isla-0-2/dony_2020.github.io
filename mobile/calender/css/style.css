@@ -1,0 +1,68 @@
+﻿*{margin: 0; padding: 0; border: 0; }
+.cb{clear: both;}
+
+.footer_wrap .ui-icon-home:after{background-color: rgba(0,0,0,0); border-radius: 0;}
+.footer_wrap .ui-icon-camera:after{background-color: rgba(0,0,0,0); border-radius: 0;}
+.footer_wrap .ui-icon-shop:after{background-color: rgba(0,0,0,0); border-radius: 0;}
+.footer_wrap .ui-icon-sns:after{background-color: rgba(0,0,0,0); border-radius: 0;}
+.footer_wrap .ui-icon-map:after{background-color: rgba(0,0,0,0); border-radius: 0;}
+
+
+/* id="calendar_page" */
+#calendar_page .ui-header .ui-title, #calendar_page .ui-footer .ui-title{width: 200px; margin: 12px auto;}
+#calendar_page .ui-page-header-fullscreen > .ui-content,#calendar_page .ui-page-footer-fullscreen > .ui-content{padding: 100px 10px 80px 10px; margin: 0px auto;}
+#calendar_page .ui-content{margin-top: 90px; margin-bottom: 20px;}
+#calendar_page{background: #efefef;}
+#calendar_page .fixed_header{width: 100%; height: 70px; background: #ffffff;}
+#calendar_page .fixed_header .prevBtn{width: 24px; height: 21px; position: absolute; top: 25px; left: 5px;}
+#calendar_page .fixed_header .prevBtn a{padding: 15px;}
+#calendar_page .fixed_header > h1{margin: 0 auto; margin-top: 13px; text-align: center; padding-bottom: 5px;}
+#calendar_page .fixed_header > p{color: #000000; box-shadow: 0px 2px 5px #e4e4e4; margin:0 auto; padding: 10px;}
+
+#calendar_page .ui-content h2{margin: 20px 25px; }
+
+#calendar_page .schedule_wrap{background: #ffffff; width: 95%; margin: 0 auto; margin-top: 15px; border-radius: 20px; padding: 15px 0px; box-shadow: 3px 3px 5px #999999;}
+#calendar_page .schedule_wrap .memo{width: 95%; background: #229c78; margin: 15px auto; border-radius: 20px;}
+#calendar_page .schedule_wrap .memo p{color: #ffffff; text-shadow: none; padding: 15px;}
+#calendar_page .schedule_wrap .memo p span{float: right; font-size: 13px;}
+#calendar_page .schedule_wrap .schedule>a{text-decoration: none;}
+#calendar_page .schedule_wrap .schedule>a>p{text-align: center; font-weight: bold; font-size: 20px; color: #666666; cursor: pointer;}
+#calendar_page .schedule_wrap .schedule>a>p>span{font-size: 16px;}
+
+#calendar_page .chart_wrap{background: #ffffff; width: 95%; margin: 0px auto; margin-bottom: 30px; border-radius: 20px; box-shadow: 3px 3px 5px #999999; padding: 10px;}
+
+/* id="add_schedule" */
+#add_schedule .ui-header .ui-title, #calendar_page .ui-footer .ui-title{width: 200px; margin: 12px auto;}
+#add_schedule .ui-page-header-fullscreen > .ui-content, #add_schedule .ui-page-footer-fullscreen > .ui-content{padding: 100px 10px 80px 10px; margin: 0px auto;}
+#add_schedule .ui-content{margin-top: 90px; margin-bottom: 20px;}
+#add_schedule{background: #efefef;}
+#add_schedule .fixed_header{width: 100%; height: 70px; background: #ffffff;}
+#add_schedule .fixed_header .prevBtn{width: 24px; height: 21px; position: absolute; top: 25px; left: 5px;}
+#add_schedule .fixed_header .prevBtn a{padding: 15px;}
+#add_schedule .fixed_header > h1{margin: 0 auto; margin-top: 13px; text-align: center; padding-bottom: 5px;}
+#add_schedule .fixed_header > p{color: #000000; box-shadow: 0px 2px 5px #e4e4e4; margin:0 auto; padding: 10px;}
+
+#add_schedule .ui-content .top{width: 95%; margin: 0 auto; margin-bottom: 10px; text-align: center; color: #666666; font-weight: bold; font-size: 22px;}
+#add_schedule .ui-content .top .cancel{display: block; width: 10%; float: left;}
+#add_schedule .ui-content .top .save{display: block; width: 10%; float: right;}
+#add_schedule .ui-content .top a{text-decoration: none; color: #bf3b3b; font-size: 16px;}
+
+#add_schedule .ui-field-contain,#add_schedule .ui-mobile fieldset.ui-field-contain{background: #ffffff; width: 94%; height: 130px; border-radius: 20px; margin: 15px auto; box-shadow: 3px 3px 5px #999999;} 
+#add_schedule #input1.ui-field-contain,#add_schedule #input1.ui-mobile fieldset.ui-field-contain{height: 100px;} 
+#add_schedule .ui-input-text, .ui-input-search{width: 60%; float: right; border:none; border-bottom: 1px solid #efefef; box-shadow: none; margin-right: 20px;}
+#add_schedule .ui-field-contain > label{font-weight: bold; float: left; line-height: 2; margin-left: 20px;}
+#add_schedule .ui-field-contain > label.first{margin-top: 15px;}
+#add_schedule .ui-field-contain div.ui-slider-switch{float: right; margin-right: 20px; margin-top: 10px; width: 60px; border-radius: 20px;} 
+#add_schedule .ui-field-contain>label~.ui-btn-inline{float: right; margin: 10px 20px 5px 0px;} 
+
+
+
+
+
+
+
+
+
+
+
+
